@@ -1,8 +1,21 @@
+<<<<<<< HEAD
+
 # Pod Test Repo
+
+=======
+
+# Pod Repo
+
+> > > > > > > upstream/main
 
 # To do before each breakout session:
 
 `git pull` on the **main** branch.
+<<<<<<< HEAD
+
+=======
+
+> > > > > > > upstream/main
 
 - To check which branch you are on, use `git branch`
 - To change to main use, `git checkout main`.
