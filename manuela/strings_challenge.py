@@ -9,14 +9,14 @@ ingredient_1 = 'milk'
 ingredient_2 = 'eggs'
 ingredient_3 = 'flour'
 ingredient_4 = 'sugar'
-joined_string = "milk, eggs, flour, sugar"
 print('Four simple ingredients can combine to make so many different things:')
 # 1.1 Print the 4 ingredients in a single print statement, as 4 separate strings (separated by commas)
 #print((ingredient_1)+,+ (ingredient_2)+,+ (ingredient_3)+,+ (ingredient_4))
 
-print(joined_string)
+#print(joined_string)
 # print(ingredient_1+,+, ingredient_2+,)
-print(ingredient_1, ingredient_2, ingredient_3, ingredient_4)
+joined_string = ingredient_1 + ', ' + ingredient_2 + ', ' + ingredient_3 + ', ' + ingredient_4
+print(joined_string)
 
 # 1.2 Print the 4 ingredients using string concatenation
 # (make sure what you print out is legible-- add spaces and/or commas to your string so they don't all become one word!)
@@ -31,6 +31,7 @@ print(f'{ingredient_1}, {ingredient_2}, {ingredient_3}, {ingredient_4}')
 
 # 2. String Methods
 # 2.1 Save your f-string from step 1.3 as a variable called ingredients
+print(joined_string.replace('milk', 'butter'))
 ingredient_1 = ingredient_1.replace('milk', 'butter')
 ingredients = f'{ingredient_1}, {ingredient_2}, {ingredient_3}, {ingredient_4}'
 print(ingredients)
