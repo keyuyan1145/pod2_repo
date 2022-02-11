@@ -19,13 +19,11 @@ my_age = current_year - birth_year
 # 2.2: Print out a sentence about Google's age. Make sure to include your variable in the f-string!
 print(my_age, 'years old')
 
-
 # 2.3 How many _months_ old is Google? Create a new variable google_age_months, and use multiplication to figure it out,
 # then print the info.
 # (Assume 12 months for each year, you don't need to check which month they started)
 age_months = my_age * 12
 print(age_months, 'months')
-
 
 print('3.1: The line of code below is commented out because it produces many SyntaxErrors.')
 print('Fix the problem and turn the comment back into regular Python code')
