@@ -12,13 +12,35 @@ msft = 200
 
 print("Challenge 3.2.1: Taking user input")
 # TODO: Write code to ask the client his name and save it to a variable.
+client_name = input("What is your name? ")
 # TODO: Write code to ask the client his savings and save it to another variable.
+client_saving = int(input("How much money do you have in savings? "))
 # TODO: Write code to ask the client the stock he is interested in and save it to another variable, as shown below.
-stock = input("Which stock are you interested in? Type 'amzn' for Amazon, 'aapl' for Apple, 'fb' for Facebook, 'goog' for Google and 'msft' for Microsoft.")
+stock = input("Which stock are you interested in? \n(Type 'amzn' for Amazon, 'aapl' for Apple, 'fb' for Facebook, 'goog' for Google and 'msft' for Microsoft.)")
 print()
 
 print("Challenge 3.2.2: Perform user-specific calculations")
 # TODO: You have all 3 user inputs stores in variables. Based on that, write conditional (if-elif-else) statements to find out the number of stocks of the company that can be purchased with the savings amount.
+if stock == 'amzn':
+    stock_purchase = (client_saving / amazon)
+    stock_name = 'Amazon'
+    stock_price = amazon
+elif stock == 'aapl':
+    stock_purchase = (client_saving / apple)
+    stock_name = 'Apple'
+    stock_price = apple
+elif stock == 'fb':
+    stock_purchase = (client_saving / fb)
+    stock_name = 'Facebook'
+    stock_price = fb
+elif stock == 'goog':
+    stock_purchase = (client_saving / google)
+    stock_name = 'Google'
+    stock_price = google
+elif stock == 'msft':
+    stock_purchase = (client_saving / msft)
+    stock_name = 'Microsoft'
+    stock_price = msft
 
 '''
 Your code should look like this:
@@ -33,7 +55,7 @@ print()
 
 print("Challenge 3.2.3: Output for the user the result")
 # TODO: Once you have calculated the number of stocks that can be purchased, print the result for the client. Result should be in a format like this:
-
+print(f"{client_name} has ${client_saving} in savings and can buy {int(stock_purchase)} shares of {stock_name} at the current price of ${stock_price}.")
 # Alex has $5000 in savings and he can buy 50 shares of Apple at the current price of $100.
 
 print()
