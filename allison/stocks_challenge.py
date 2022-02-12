@@ -55,7 +55,7 @@ print()
 
 print("Challenge 3.2.3: Output for the user the result")
 # TODO: Once you have calculated the number of stocks that can be purchased, print the result for the client. Result should be in a format like this:
-print(f'{client_name} in savings and can buy {num_stocks} shares of {stock_name} at the current price of ${stock_price}.')
+print(f'{client_name} has ${client_savings} in savings and can buy {num_stocks} shares of {stock_name} at the current price of ${stock_price}.')
 # Alex has $5000 in savings and he can buy 50 shares of Apple at the current price of $100.
 
 print()
