@@ -57,7 +57,6 @@ assert(d == False) #Do not change this line
 
 print()
 
-
 print("Code Snippet 5:")
 
 #modify the comparison operator so o evalutes to true
