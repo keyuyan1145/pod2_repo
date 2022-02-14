@@ -9,11 +9,9 @@ ingredient_4 = 'sugar'
 
 print('Four simple ingredients can combine to make so many different things:')
 # 1.1 Print the 4 ingredients in a single print statement, as 4 separate strings (separated by commas)
-#Sprint(f"{ingredient_1} {ingredient_2} {ingredient_3} {ingredient_4}")
+print(ingredient_1, ingredient_2, ingredient_3, ingredient_4)
 
-#print("ingredient_1 ingredient_2 ingredient_3 ingredient_4")
 
-print(f"{ingredient_1}, {ingredient_2}, {ingredient_3}, {ingredient_4}")
 
 
 
