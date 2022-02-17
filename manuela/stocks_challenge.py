@@ -41,7 +41,10 @@ elif stock.startswith ('fb'):
 elif stock.startswith ('goog'):
     print('I am interested in Google stocks')
 else:                            #just else: then print statement
-    print('There has been an input error. Not a proper name of stock. And he can buy 0 shares in this stock. Please try again')Please try again')
+    #print(f'There has been an input error. ')
+    
+    print('There has been an input error. Please try again')
+    print(f"{client} has ${investment_amount} in savings. And he can buy {shares} shares in {stock}.")
 #repeat the if else to close the loop of input error  BONUS
 print()
 
@@ -65,18 +68,6 @@ print("Challenge 3.2.3: Output for the user the result")
 # TODO: Once you have calculated the number of stocks that can be purchased, print the result for the client. Result should be in a format like this:
 
 # Alex has $5000 in savings and he can buy 50 shares of Apple at the current price of $100.
-if stock == ('amzn'):
-    shares = f'{investment_amount/amzn}'
-elif stock.startswith('aapl'):
-    shares = f'{investment_amount/aapl}'
-elif stock.startswith('fb'):
-    shares = f'{investment_amount/fb}'
-elif stock.startswith('goog'):  
-    shares = f'{investment_amount/goog}'
-elif stock.startswith('msft'):
-    shares = f'{investment_amount/msft}'
-else:
-    print('There has been an input error. Not a proper name of stock. Please try again')
 
 if stock == ('amzn'):
     shares = f'{investment_amount/amzn}'
@@ -89,7 +80,20 @@ elif stock.startswith('goog'):
 elif stock.startswith('msft'):
     shares = f'{investment_amount/msft}'
 else:
-    print('There has been an input error. Not a proper name of stock. And he can buy 0 shares in this stock. Please try again')
+    print('There has been an input error. Please try again')
+   
 
+if stock == ('amzn'):
+    shares = f'{investment_amount/amzn}'
+elif stock.startswith('aapl'):
+    shares = f'{investment_amount/aapl}'
+elif stock.startswith('fb'):
+    shares = f'{investment_amount/fb}'
+elif stock.startswith('goog'):  
+    shares = f'{investment_amount/goog}'
+elif stock.startswith('msft'):
+    shares = f'{investment_amount/msft}'
+#else:
+    #print('There has been an input error. Please try again')
 
-print(f'{client} has "{investment_amount} in savings. And he can buy {shares} in {stock}')
+print(f'{client} has ${investment_amount} in savings. And he can buy {shares} shares in {stock} stock. ')
