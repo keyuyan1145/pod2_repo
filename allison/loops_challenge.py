@@ -95,11 +95,14 @@ for times in range(num_times):
 # Write a program that asks the user what temperature it is outside. While the temperature is below 65,
 # tell the user to wear a sweater. Once the temperature is over 65, stop looping, and tell the user that
 # Spring has sprung!
-temp=int(input('What is the temperature outside?'))
-while temp<65:
-    print('Wear a sweater!')
-else:
-    print('Spring has sprung!')
+
+while True:
+    temp=int(input('What is the temperature outside?'))
+    if temp<65:
+        print('Wear a sweater!')
+    else:
+        break
+print('Spring has sprung!')
 
 # NOTE: remember, if you accidentally create an infinite while loop, it's ok! Go into the command line and
 # a) on a mac: hit command + C to stop your program, or b) on a pc: hit control + C to stop the program.
