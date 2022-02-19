@@ -124,3 +124,6 @@ restaurants  = [restaurant_1, restaurant_2, restaurant_3]
 for restaurant in restaurants:
     print(restaurant["name"])
     print(restaurant["address"])
+
+# test after
+# git rebase -i HEAD~3
