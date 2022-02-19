@@ -62,6 +62,7 @@ print()
 
 # ----------- PRINT FIRST 10 ELEMENTS
 print(top_100[:10])
+
 # SHOW LENGTH OF TOP 10
 print(len(top_100[:10]))
 print()
