@@ -1,4 +1,4 @@
 def test(arr):
     '''Testing git push'''
     # akfjas
-    # fgasljdh
+    # Test without extensions
