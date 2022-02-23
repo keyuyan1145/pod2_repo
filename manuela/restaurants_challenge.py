@@ -1,3 +1,6 @@
+#date 2/22/2022
+#Manuela and David
+
 print("Challenge: Favourite Restaurants")
 
 print()
@@ -29,14 +32,19 @@ restaurant = {
     "distance": 1604.23,
     "transactions": ["pickup", "delivery"]
 }
-print(f'Four Barrel Coffee restaurant has a latitude of {restaurant["latitude"]}, and a longitude of {restaurant["longitude"]}')
-print(f'The name and address for the restaurant is {restaurant["name"]}, {restaurant["address1"]}, {restaurant["city"]}, {restaurant["state"]} {restaurant["zip_code"] }')
-print(f'The website url for the restaurant is {restaurant["url"]}')
-print(restaurant)
 
 # TODO: Write code to print the latitude and longitude of Four Barrel Coffee.
 # TODO: Write code to print the complete address of the Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
-# TODO: Write code to print the URL of the website of Four Barrel Coffee.
+# TODO: Write code to print the URL of the website of Four Barrel Coffee.print(f'Four Barrel Coffee restaurant has a latitude of {restaurant["latitude"]}, and a longitude of {restaurant["longitude"]}')
+
+print(f'The latitude {restaurant["latitude"]}, and longitude {restaurant["longitude"]} of Four Barrel Coffee. ')
+print()
+print(f'The address for the Four Barrel Coffee restaurant is {restaurant["address1"]}, {restaurant["city"]}, {restaurant["state"]} {restaurant["zip_code"]}' )
+print()
+print(f'The website url for the restaurant is {restaurant["url"]}')
+
+
+
 
 
 print()
@@ -49,31 +57,35 @@ print("Question 2")
 #         3. favourite_dish: your favourite thing to order at the restaurant (string)
 restaurant_1 = {
     "name": "Tel-Aviv Kosher Pizza",
-    "address" : "6349 N California Ave, Chicago, IL 60659",
+    "address" : "6349 N California Ave, NY 60659",
     "favourite_dish": "falafel"
 }
 restaurant_2 = {
-    "name": "Great Chicago Food and Beverage_Co",
-    "address" : "3149 W Devon Ave, Chicago, IL 60659",
-    "favorite_dish": "roasted chicken with french fries"
+    "name": "Great New York Food and Beverage_Co",
+    "address" : "3149 W Devon Ave, NY 60659",
+    "favourite_dish": "roasted chicken with french fries"
 }   
 restaurant_3 = {
     "name": "Evita Argentinian Steakhouse",
-    "address": "6112 N Lincoln Ave, Chicago, IL 60659",
-    "favorite_dish": "roasted chicken with potatoes"
+    "address": "6112 N Lincoln Ave, NY 60659",
+    "favourite_dish": "roasted chicken with potatoes"
 }
+
 # TODO: Print each dictionary
-print("My favourite Restaurants in Chicago")
+print("My favourite Restaurants in New York")
+
 print()
-print("Restaurant 1 ")
+print("Restaurant 1")
 for value in restaurant_1.values():
     print(value)
 print()
-print("Restaurant_2")
+
+print("Restaurant 2")
 for value in restaurant_2.values():
     print(value)
 print()
-print("Restaurant_3")
+
+print("Restaurant 3")
 for value in restaurant_3.values():
     print(value)
 print()
@@ -112,9 +124,9 @@ print("Question 4")
 # TODO: Update the address field of 1 restaurant
 # TODO: Print the new address of the restaurant by accessing that field of the restaurant's dictionary
 # TODO: Print the updated dictionary.
-restaurant_1["address"]="6347 N California Ave, Chicago, IL 60659"
-print(restaurant_1["address"])
-print(restaurant_1)
+restaurant_2["address"]="6112 N Lincoln Ave, NY 60659"
+print(restaurant_2["address"])
+print(restaurant_2)
 print()
 
 
@@ -127,6 +139,7 @@ print("Question 5")
 restaurants = [restaurant_1, restaurant_2, restaurant_3]
 # TODO: Loop through your list and print out the name and address of each restaurant
 for i in restaurants:
-    print(i)
+    print(i['name'], i['address'])
     print()
+print("Completed restaurants challenge")
 print("Completed restaurants challenge")
