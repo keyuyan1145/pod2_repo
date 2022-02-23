@@ -186,7 +186,7 @@ books_with_details = [
 def count_books():
     '''Counts the total books in the "books_with_details" list'''
 
-    num_books = sum([1 for book in books_with_details])
+    num_books = len(books_with_details)
     return num_books
 
 
