@@ -1,4 +1,3 @@
-'''
 print('Question 1:')
 # You are working on a library management system, here are the list books at the library
 books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU WANT TO TALK ABOUT RACE', 'STAMPED FROM THE BEGINNING', 'JUST MERCY', 'BORN A CRIME',
@@ -6,6 +5,7 @@ books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU 
 
 # 1.0
 # What data type is the object 'books'? How do you know?
+print('I know this is a list because it has square brackets around it. ')
 print(type(books))  #expect list
 
 # 1.1
@@ -61,8 +61,6 @@ search_by_name('JUST MERCY')
 # Search for the book 'JUST MERCY'
 
 print()
-'''
-from doctest import OutputChecker
 
 
 print('Question 2')
@@ -152,9 +150,10 @@ books_with_details = [
 
 # 2.0
 # Describe the structure of the data in books_with_details. What types of data are nested within others? How do you know? 
-# This is a list of dictionaries with strings as key value as types
 # This is a list(defined by []) with multiple dictionaries contained within.
 #How do you know? by the separators
+
+print('This is a list of dictionaries with strings as key value as types. I know this because there is a group of items contained within square brackets and separators are used. ')
 print(type(books_with_details))  
 print(type(books_with_details [0]))
 print(type(books_with_details [0]['title']))
@@ -166,45 +165,31 @@ print(type(books_with_details [0]['title']))
 # Return: number of books (integer)
 #count_books()
  # Return: number of books (integer)   
-def count_books():       
-    print((len(books_with_details)))
-count_books()
-print()
+def count_books(): 
+    #print((len(books_with_details)))
+    return len(books_with_details)     
+#count_books()
+#print()
 
 # 2.2
 # Check the number of books available in the books list using the count_books function
-print(type(len('books_with_details')))
-print()
+#print(type(len('books_with_details')))
+print(count_books())
 
 # 2.3
 # Create a function 'search_by_author' that returns the titles of books by an author
 # Parameters - author (string)
 # Return - author's books (list of strings)
 # Hint - You will need a for loop, if statement, .append() for this solution!
-i = 'author'
-#def search_by_author():
-for i in books_with_details:
-        if i in books_with_details[1]:
-            print('author')
-    #author.append('author')
-    
+
+def search_by_author(author):
+    books_by_author = []
+    for book in books_with_details:
+        if book['author'] == author:
+            books_by_author.append(book['title'])
+    return books_by_author
        
-        #print(books_with_details in range()['author'])
-   # if author in books_with_details:
-#search_by_author()
-#print(authors_books[1:])
-       # if i in authors_books():
-
-    
-
-#search_by_author()
-'''
-    for a in author:
-        if author_in_list
-    print(books_with_details [1]['author'])
-search_by_author()
-
 # 2.4
 # Search for book titles by the author 'Timothy Snyder' using the search_by_author function
+print(search_by_author('Timothy Snyder'))
 
-'''
