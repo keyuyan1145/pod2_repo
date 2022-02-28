@@ -111,11 +111,10 @@ Update just this value in that restaurant's dictionary
 '''
 
 # TODO: Update the address field of 1 restaurant
-restaurant_2_new_add = {"new_address" : "50 st and 10th Ave, New York, NY, 10019"}
+restaurant_2.update({"address" : "50 st and 10th Ave, New York, NY, 10019"})
 # TODO: Print the new address of the restaurant by accessing that field of the restaurant's dictionary
-print(restaurant_2_new_add["new_address"])
+print(restaurant_2["address"])
 # TODO: Print the updated dictionary.
-restaurant_2.update(restaurant_2_new_add)
 print(restaurant_2)
 print()
 
