@@ -12,18 +12,26 @@ print(type(books))
 # Create a function 'available_books' to print the books list
 # Parameters: Not needed for this function
 # Return: Not needed for this function
+
+
 def available_books():
     print(books)
-#The function has been created
+
+
+# The function has been created
 # 1.2
 # Run the 'available_books' function
-available_books() # this command will call the function(no need to put print)
+available_books()  # this command will call the function(no need to put print)
 # 1.3
 # Create a function 'check_out' that removes a book from the books list
 # Parameters: book (string)
 # Return: Not needed for this function
+
+
 def check_out(book):
     books.remove(book)
+
+
 # 1.4
 # Check out 'SAPIENS' using the check_out function
 check_out('SAPIENS')
@@ -33,8 +41,12 @@ available_books()
 # Create a function 'check_in' that adds a book to the books list
 # Parameters: book (string)
 # Return: Not needed for this function
+
+
 def check_in(book):
     books.append(book)
+
+
 # 1.6
 # Check in 'SAPIENS' using the check_in function
 check_in('SAPIENS')
@@ -44,11 +56,15 @@ available_books()
 # Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
 # Parameters: book (string)
 # Return: Not needed for this function
+
+
 def search_by_name(book):
     if book in books:
         print('Available')
     else:
         print('Not Available')
+
+
 # 1.8
 # Search for the book 'JUST MERCY'
 search_by_name('JUST MERCY')
@@ -146,11 +162,14 @@ print(type(books_with_details))
 # Create a function 'count_books' that returns the number of books in the books_with_details list
 # Parameters: Not needed for this function
 # Return: number of books (integer)
+
+
 def count_books():
     count = 0
     for book in books_with_details:
-        count += 1 
+        count += 1
     return count
+
 
 # 2.2
 # Check the number of books available in the books list using the count_books function
@@ -163,10 +182,13 @@ print(output)
 # Return - author's books (list of strings)
 # Hint - You will need a for loop, if statement, .append() for this solution!
 authors_books = []
+
+
 def search_by_author(author):
     for i in books_with_details:
         if i['author'] == author:
-            authors_books.append(i['title']) 
+            authors_books.append(i['title'])
+
 
 # 2.4
 # Search for book titles by the author 'Timothy Snyder' using the search_by_author function
