@@ -46,5 +46,5 @@ This function should ALSO increase the 'plays' value for that song's dictionary 
 So, if 'Controversy' has 0 plays so far, it should now be increased to 1
 '''
 def play_track(playlist, track=1):
-	print(f'Now playing track {track}, {playlist[track-1]}, by {playlist[track-1]}')
-	playlist[track-1]['plays']+=track-1
+	print(f'Now playing track {track}, {playlist[track-1]["title"]}, by {playlist[track-1]["artist"]}')
+	playlist[track-1]["plays"]+=track-1
