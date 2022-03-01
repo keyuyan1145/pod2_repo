@@ -169,7 +169,7 @@ def search_by_author(author):
     for book in books_with_details:
         if book['author']==author:
             authors_books.append(book['title'])
-            return authors_books
+    return authors_books
         
 
 # 2.4
