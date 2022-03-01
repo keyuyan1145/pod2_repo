@@ -209,8 +209,8 @@ def search_by_author(author):
 
     # Loop through list to find books with the author and matches length of string
     for book in books_with_details:
-        if author in book['author'] and len(author) == len(book['author']):
-            # if author == book['author']:
+        # if author in book['author'] and len(author) == len(book['author']):
+        if author == book['author']:
             books.append(book['title'])
 
     # if books list isn't empty
