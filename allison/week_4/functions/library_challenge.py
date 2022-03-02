@@ -14,9 +14,10 @@ print(type(books))
 # Create a function 'available_books' to print the books list
 # Parameters: Not needed for this function
 # Return: Not needed for this function
+
+
 def availible_books():
     print(books)
-
 
 
 # 1.2
@@ -26,8 +27,11 @@ availible_books()
 # Create a function 'check_out' that removes a book from the books list
 # Parameters: book (string)
 # Return: Not needed for this function
+
+
 def checkout(book):
     return books.remove(book)
+
 
 # 1.4
 # Check out 'SAPIENS' using the check_out function
@@ -39,8 +43,11 @@ availible_books()
 # Create a function 'check_in' that adds a book to the books list
 # Parameters: book (string)
 # Return: Not needed for this function
+
+
 def check_in(book):
     books.append(book)
+
 
 # 1.6
 # Check in 'SAPIENS' using the check_in function
@@ -52,6 +59,8 @@ availible_books()
 # Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
 # Parameters: book (string)
 # Return: Not needed for this function
+
+
 def search_by_name(book):
     if book in books:
         print('Availible')
@@ -153,8 +162,11 @@ print('books_with_detail is a list of doctionaries. The [] shows that it is a li
 # Create a function 'count_books' that returns the number of books in the books_with_details list
 # Parameters: Not needed for this function
 # Return: number of books (integer)
+
+
 def count_books():
     return len(books_with_details)
+
 
 # 2.2
 # Check the number of books available in the books list using the count_books function
@@ -164,13 +176,15 @@ print(count_books())
 # Parameters - author (string)
 # Return - author's books (list of strings)
 # Hint - You will need a for loop, if statement, .append() for this solution!
-authors_books=[]
+authors_books = []
+
+
 def search_by_author(author):
     for book in books_with_details:
-        if book['author']==author:
+        if book['author'] == author:
             authors_books.append(book['title'])
     return authors_books
-        
+
 
 # 2.4
 # Search for book titles by the author 'Timothy Snyder' using the search_by_author function
