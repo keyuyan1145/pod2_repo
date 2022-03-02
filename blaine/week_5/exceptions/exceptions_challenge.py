@@ -10,6 +10,8 @@
 
 # NOTE: What type of error does python throw if you try to turn a non-number string into an integer?
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
+
+
 def validate_user_input() -> int:
     '''Tries to validate a number given by a user and returns that number'''
 
