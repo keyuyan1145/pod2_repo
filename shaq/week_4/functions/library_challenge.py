@@ -1,3 +1,6 @@
+from itertools import count
+
+
 print('Question 1:')
 # You are working on a library management system, here are the list books at the library
 books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU WANT TO TALK ABOUT RACE', 'STAMPED FROM THE BEGINNING', 'JUST MERCY', 'BORN A CRIME',
@@ -5,43 +8,55 @@ books = ['MY OWN WORDS', 'WHITE FRAGILITY', 'THE BODY KEEPS THE SCORE', 'SO YOU 
 
 # 1.0
 # What data type is the object 'books'? How do you know?
-
+print(type(books)) #its a list because I used the type function
 
 # 1.1
 # Create a function 'available_books' to print the books list
+def available_books():
+    print(books)
 # Parameters: Not needed for this function
 # Return: Not needed for this function
 
 # 1.2
 # Run the 'available_books' function
-
+available_books()
 # 1.3
 # Create a function 'check_out' that removes a book from the books list
+def check_out(book):
+    books.remove(book)
 # Parameters: book (string)
 # Return: Not needed for this function
 
 # 1.4
 # Check out 'SAPIENS' using the check_out function
-
+check_out('SAPIENS')
 # Bonus: Run available_books function again to see if the book was checked out
-
+available_books()
 # 1.5
 # Create a function 'check_in' that adds a book to the books list
+def check_in(book):
+    books.append(book)
 # Parameters: book (string)
 # Return: Not needed for this function
 
 # 1.6
 # Check in 'SAPIENS' using the check_in function
-
+check_in('SAPIENS')
 # Bonus: Run available_books function to see if the book was checked in
-
+available_books()
 # 1.7
 # Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
+def search_by_name(book):
+    if book in books:
+     print('available')
+    else:
+     print('not available')
 # Parameters: book (string)
 # Return: Not needed for this function
 
 # 1.8
 # Search for the book 'JUST MERCY'
+search_by_name('JUST MERCY')
 
 print()
 
@@ -131,17 +146,32 @@ books_with_details = [
 ]
 # 2.0
 # Describe the structure of the data in books_with_details. What types of data are nested within others? How do you know?
-
+print(type(books_with_details))
 # 2.1
 # Create a function 'count_books' that returns the number of books in the books_with_details list
+def count_books():
+    book_count = len(books_with_details)
+    print(book_count)
+    
+
+        
 # Parameters: Not needed for this function
 # Return: number of books (integer)
 
 # 2.2
 # Check the number of books available in the books list using the count_books function
+count_books()
 
 # 2.3
 # Create a function 'search_by_author' that returns the titles of books by an author
+author_of_book = []
+
+def search_by_author(author):
+    for i in books_with_details:
+        if i['author'] == author:
+            author_of_book.append(i['title'])
+
+
 # Parameters - author (string)
 # Return - author's books (list of strings)
 # Hint - You will need a for loop, if statement, .append() for this solution!
@@ -149,4 +179,5 @@ books_with_details = [
 
 # 2.4
 # Search for book titles by the author 'Timothy Snyder' using the search_by_author function
-
+search_by_author('Timothy Snyder')
+print(author_of_book)
