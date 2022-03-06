@@ -5,7 +5,7 @@
 
 # 1 Import all the functions in playlist_functions.py
 from playlist_functions import *
-import numpy as np 
+
 # This code initializes your playlist as an empty list. no songs in it yet!
 my_playlist = []
 
