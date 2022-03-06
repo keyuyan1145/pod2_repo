@@ -11,12 +11,22 @@
 # NOTE: What type of error does python throw if you try to turn a non-number string into an integer?
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
 
+def validate_user_input():
+    has_int = False
 
+    while has_int== False:
+        num = input('Please enter number: ')
+        try:
+            int_num = int(num)
+            has_int = True
+        except ValueError:
+            print('You did not enter a valid number, please try again')
+    return int_num
 
 # Once you are done, uncomment the two lines below to ensure that your code works as expected
 
-# user_number = validate_user_input()
-# print(f'The number the user entered is {user_input}.')
+user_number = validate_user_input()
+print(f'The number the user entered is {user_number}.')
 
 
 
@@ -28,9 +38,14 @@
 
 # NOTE: What type of error does python throw if you try to index into a list past the number of items in it?
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
-
+def print_tenth_item(top_ten):
+    try:
+        tenth=top_ten[9]
+        print(f'The tenth item in the list is {tenth}')
+    except IndexError:
+        print('There is not 10 items in this list')
 
 # Once you are done, uncomment the two lines below to ensure that your code works as expected
 
-# print_tenth_item(['a', 'b', 'c'])  # Should print out that there are not ten items in the list
-# print_tenth_item([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])  # Should print out the 10th item in the list
+print_tenth_item(['a', 'b', 'c'])  # Should print out that there are not ten items in the list
+print_tenth_item([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])  # Should print out the 10th item in the list
