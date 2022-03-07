@@ -12,11 +12,11 @@ msft = 200
 
 print("Challenge 3.2.1: Taking user input")
 # TODO: Write code to ask the client his name and save it to a variable.
-name = input("whats your name?")
+name = input("whats your name?\n")
 # TODO: Write code to ask the client his savings and save it to another variable.
-savings = input("whats your savings?")
+savings = (int(input("whats your savings?\n")))
 # TODO: Write code to ask the client the stock he is interested in and save it to another variable, as shown below.
-stock = input("Which stock are you interested in? Type 'amzn' for Amazon, 'aapl' for Apple, 'fb' for Facebook, 'goog' for Google and 'msft' for Microsoft.")
+stock = input("Which stock are you interested in? Type 'amzn' for Amazon, 'aapl' for Apple, 'fb' for Facebook, 'goog' for Google and 'msft' for Microsoft.\n")
 print()
 
 print("Challenge 3.2.2: Perform user-specific calculations")
@@ -26,26 +26,26 @@ print("Challenge 3.2.2: Perform user-specific calculations")
 #Your code should look like this:
 
 if stock == "amzn":
-    print(savings / amazon)
+    stocks = (savings / amazon)
     
 elif stock == "aapl":
-    print(savings / apple)
+    stocks = (savings / apple)
 
 elif stock == "fb":
-    print(savings / fb)
+    stocks = (savings / fb)
 
 elif stock == "goog":
-    print(savings / google)
+    stocks = (savings / google)
 
 elif stock == "msft":
-    print(savings / msft)
+    stocks = (savings / msft)
 
 
-print()
+print(stocks)
 
 print("Challenge 3.2.3: Output for the user the result")
 # TODO: Once you have calculated the number of stocks that can be purchased, print the result for the client. Result should be in a format like this:
-
+print(f"{name} has ${savings} in savings and can buy {int(stocks)} shares of {stock} at the current price of ${stocks}.")
 # Alex has $5000 in savings and he can buy 50 shares of Apple at the current price of $100.
 
 print()
