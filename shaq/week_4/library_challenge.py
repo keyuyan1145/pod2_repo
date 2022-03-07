@@ -46,25 +46,28 @@ available_books()
 
 # 1.6
 # Check in 'SAPIENS' using the check_in function
+check_in('SAPIENS')
 
 # Bonus: Run available_books function to see if the book was checked in
-
+available_books()
 # 1.7
 # Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
 # Parameters: book (string)
 # Return: Not needed for this function
 
-def Search_by_name(book):
-    if book in books():
-        print('availible')
+# def Search_by_name(book):
+#     if book in books():
+#         print('availible')
+#     else:
+#         print('Not Available')
 
-Search_by_name('JUST MERCY')
 
 
-# 1.8
-# Search for the book 'JUST MERCY'
 
-print()
+# # 1.8
+# # Search for the book 'JUST MERCY'
+# Search_by_name('JUST MERCY')
+# print()
 
 print('Question 2')
 # Here's the same list of books, with additional details
@@ -152,22 +155,32 @@ books_with_details = [
 ]
 # 2.0
 # Describe the structure of the data in books_with_details. What types of data are nested within others? How do you know?
-
+print(type(books_with_details)) #its a list because of []
 # 2.1
 # Create a function 'count_books' that returns the number of books in the books_with_details list
 # Parameters: Not needed for this function
 # Return: number of books (integer)
+def count_books():
+    amount_of_books = len(books_with_details)
+    return amount_of_books
 
 # 2.2
 # Check the number of books available in the books list using the count_books function
-
+print(count_books())
 # 2.3
 # Create a function 'search_by_author' that returns the titles of books by an author
 # Parameters - author (string)
 # Return - author's books (list of strings)
 # Hint - You will need a for loop, if statement, .append() for this solution!
+authors_books = []
+
+def search_by_author(author):
+    for book in books_with_details:
+        if book['author'] == author:
+            authors_books.append(book['title'])
+    return authors_books
 
 
 # 2.4
 # Search for book titles by the author 'Timothy Snyder' using the search_by_author function
-
+print(search_by_author("Timothy Snyder"))
