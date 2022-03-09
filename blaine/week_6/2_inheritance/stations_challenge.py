@@ -19,16 +19,28 @@ SubwayStation should:
     this will indicate which subway lines stop at the station (for example ['A', 'C'])
 -override the show_info() method from Station to display which subway lines stop there, in addition to the station_name and location
 '''
+
+
 class Station:
     def __init__(self, station_name, location):
         self.station_name = station_name
         self.location = location
-    
+
     def show_info(self):
         print(f'{self.station_name} station is located at {self.location}')
 
 
+class SubwayStation(Station):
+    def __init__(self, station_name, location, lines):
+        super().__init__(station_name, location)
+        self.lines = lines
 
+    def show_info(self):
+        print(
+            f'Lines: {self.lines} \nStation Name: {self.station_name} \nLocation: {self.location}')
+
+
+print()
 print('Question 2: Make an example subway station')
 '''
 Using your SubwayStation class, instantiate a subway station with the info below. 
@@ -38,8 +50,11 @@ station_name: '14th street'
 location: '14th street and 7th avenue'
 lines: ['1', '2', '3', 'L']
 '''
+Street_14th = SubwayStation(
+    '14th street', '14th street and 7th avenue', ['1', '2', '3', 'L'])
 
-
+Street_14th.show_info()
+print()
 print('Question 3: Making the BusStation Class')
 
 '''
@@ -54,8 +69,27 @@ BusStation should:
 '''
 
 
+class BusStation(Station):
+    def __init__(self, station_name, location, routes):
+        super().__init__(station_name, location)
+        self.routes = routes
+        self.open = True
+
+    def open_station(self):
+        self.open = True
+
+    def close_station(self):
+        self.open = False
+
+    def show_info(self):
+        if self.open:
+            print(
+                f'Routes: {self.routes} \nStation Name: {self.station_name} \nLocation: {self.location}')
+        else:
+            print('Sorry, this station is closed')
 
 
+print()
 print('Question 4: Make an example bus station')
 '''
 Using your BusStation class, instantiate a bus station with the info below. 
@@ -68,6 +102,15 @@ location: '34th street and 12th avenue'
 lines: ['Boston', 'DC', 'Philly']
 '''
 
+Nyc_megabus_stop = BusStation(
+    'NYC Megabus Stop', '34th street and 12th avenue', ['Boston', 'DC', 'Philly'])
+
+Nyc_megabus_stop.close_station()
+Nyc_megabus_stop.show_info()
+Nyc_megabus_stop.open_station()
+Nyc_megabus_stop.show_info()
+
+print()
 print('Question 5: Importing your classes')
 
 '''
@@ -78,4 +121,3 @@ Make a new python script called "station_planning.py"
     -Instantiate 3 more stations of your choosing (at least 1 bus and 1 subway)
     -Feel free to make up names, locations, lines, and routes!
 '''
-
