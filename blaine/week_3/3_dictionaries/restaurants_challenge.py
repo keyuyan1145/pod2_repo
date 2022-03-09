@@ -1,3 +1,4 @@
+
 print("Challenge: Favourite Restaurants")
 
 print()
@@ -6,7 +7,6 @@ print("Question 1")
 
 '''
 Below is a dictionary consisting of details of 1 restaurant fetched from Yelp.
-
 Go through the dictionary and print out the following 3 pieces of information about the restaurant:
 1. The latitude and longitude of Four Barrel Coffee
 2. The complete address of Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
@@ -30,12 +30,16 @@ restaurant = {
     "transactions": ["pickup", "delivery"]
 }
 
-print(restaurant)
+print()
 
 # TODO: Write code to print the latitude and longitude of Four Barrel Coffee.
-# TODO: Write code to print the complete address of the Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
+print("Latitude: ", restaurant['latitude'],
+      'Longitude: ', restaurant['longitude'])
+# TODO: Write code to print the complete address of the Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code
+print(
+    f"{restaurant['address1']} {restaurant['city']}, {restaurant['state']} {restaurant['zip_code']}")
 # TODO: Write code to print the URL of the website of Four Barrel Coffee.
-
+print(restaurant['url'])
 
 print()
 
@@ -46,7 +50,26 @@ print("Question 2")
 #         2. address: address of the restaurant (string)
 #         3. favourite_dish: your favourite thing to order at the restaurant (string)
 
+restaurant_1 = {
+    "name": "Serial Grillers",
+    "address": "5975 E. SPEEDWAY BLVD TUCSON, AZ 85712",
+    "favourite_dish": "Pennywise"
+}
+restaurant_2 = {
+    "name": "Charro Steak & Del Rey",
+    "address": "188 E Broadway Blvd Tucson, AZ 85701",
+    "favourite_dish": "The Filet"
+}
+restaurant_3 = {
+    "name": "Ruiz Hot Dogs Los Chipilones",
+    "address": "1140 S 6th Ave Tucson, AZ 85701",
+    "favourite_dish": "Sonoran Dog"
+}
+
 # TODO: Print each dictionary
+print(restaurant_1)
+print(restaurant_2)
+print(restaurant_3)
 
 # The dictionary for each restaurant should look something like this
 
@@ -67,7 +90,9 @@ Remove the 'favourite_dish' key value pair from that restaurant's dictionary
 '''
 
 # TODO: Remove the 'favourite_dish' key-value pair from one of your 3 restaurants
+del restaurant_1['favourite_dish']
 # TODO: Print the new dictionary. The new dictionary should only contain 'name' and 'address' for that restaurant
+print(restaurant_1)
 
 print()
 
@@ -78,8 +103,11 @@ Update just this value in that restaurant's dictionary
 '''
 
 # TODO: Update the address field of 1 restaurant
+restaurant_2['address'] = "199 E Broadway Blvd Tucson, AZ 85701"
 # TODO: Print the new address of the restaurant by accessing that field of the restaurant's dictionary
+print(restaurant_2['address'])
 # TODO: Print the updated dictionary.
+print(restaurant_2)
 
 print()
 
@@ -90,4 +118,8 @@ Printing out all 3 of our restaurants every time is getting annoying. Let's clea
 '''
 
 # TODO: Put your 3 restaurant dictionaries into a list called `restaurants`
+restaurants = [restaurant_1, restaurant_2, restaurant_3]
 # TODO: Loop through your list and print out the name and address of each restaurant
+for restaurant in restaurants:
+    print(restaurant["name"])
+    print(restaurant["address"])
