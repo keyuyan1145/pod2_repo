@@ -38,6 +38,14 @@ station_name: '14th street'
 location: '14th street and 7th avenue'
 lines: ['1', '2', '3', 'L']
 '''
+class SubwayStation1(Station):
+    def __init__(self, station_name, location, lines):
+        super().__init__(station_name, location)
+        self.lines=lines
+
+    def show_info(self):
+        print(f'{self.station_name} station is located at {self.location} and lines {self.lines} stop here')
+        
 
 
 print('Question 3: Making the BusStation Class')
