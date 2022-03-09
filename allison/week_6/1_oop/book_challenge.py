@@ -25,7 +25,9 @@ Print the books attribute of my_library -- it should be an empty list
 Also, print out the type of my_library to see what you get :)
 '''
 print('PART 1\n')
-
+my_library=Booklist()
+print(my_library.books)
+print(type(my_library))
 
 '''
 Part #2:
@@ -40,11 +42,17 @@ Once you have finished the method, add the following books to your library:
 Just Mercy - Bryan Stevenson
 The New Jim Crow - Michelle Alexander
 The Truths We Hold - Kamala Harris
-My Grandmother's Hands - Resmaa Menakem
+My Grandmother's Hands - Resmaa Menakem 
+
 
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
-print('\nPart 2\n')
+print('\nPart 2\n')#deleted title= and author= to try to make lillies way work
+my_library.add(title='Just Mercy', author='Bryan Stevenson')
+my_library.add(title='The New Jim Crow', author='Michelle Alexander')
+my_library.add(title='The Truths We Hold', author='Kamala Harris')
+my_library.add(title='My Grandmothers Hands',author='Resmaa Menakem')
+print(my_library.books)
 
 
 
@@ -59,6 +67,7 @@ In this script:
 Once you have finished the method, count the books in my_library and print out the result
 '''
 print('\nPart 3\n')
+print(my_library.count_books())
 
 
 
@@ -76,7 +85,8 @@ Then, print out the books attribute to make sure that book is gone
 '''
 
 print('\nPart 4\n')
-
+my_library.remove_title('Just Mercy')
+print(my_library.books)
 
 '''
 Part #5:
@@ -90,7 +100,12 @@ Then, print out the books attribute of nyt_bestsellers
 '''
 
 print('\nPart 5\n')
+nyt_bestsellers=Booklist()
 
+nyt_bestsellers.add(title='Cloud Cuckoo Land', author='Anthony Doerr')
+nyt_bestsellers.add(title='House of Sky and Breath', author='Sarah J. Maas')
+
+print(nyt_bestsellers.books)
 
 
 '''
@@ -107,3 +122,5 @@ Once you have completed this method, test it out on both my_library and nyt_best
 '''
 
 print('\nBONUS Part 6\n')
+my_library.display_titles()
+nyt_bestsellers.display_titles()
