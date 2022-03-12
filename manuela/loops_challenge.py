@@ -72,7 +72,7 @@ for weekday in days:
     elif current_temp < 65:
         print("put on a sweater")
     else:
-        print("put on some sunscreen")
+        print(temperature_above_65_degrees)
 
 
 
