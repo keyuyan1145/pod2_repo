@@ -27,6 +27,13 @@ class Station:
     def show_info(self):
         print(f'{self.station_name} station is located at {self.location}')
 
+class SubwayStation(Station):
+    def __init__(self, station_name, location, lines):
+        super().__init__(station_name = '', location = '')
+        self.lines = lines
+        
+    def show_info(self):
+        print(f'{self.station_name} station is located at {self.location} and stops at these {self.lines}')
 
 
 print('Question 2: Make an example subway station')
@@ -38,7 +45,8 @@ station_name: '14th street'
 location: '14th street and 7th avenue'
 lines: ['1', '2', '3', 'L']
 '''
-
+our_station = SubwayStation('14th street', '14th street and 7th avenue',['1', '2', '3', 'L'])
+our_station.show_info()
 
 print('Question 3: Making the BusStation Class')
 
@@ -53,6 +61,9 @@ BusStation should:
 -override the show_info() method from Station to display the bus routes and if the station is open, in addition to the station name and location
 '''
 
+class BusStation(Station):
+    def __init__(self, station_name, location, routes):
+        super().__init__()
 
 
 
