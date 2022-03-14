@@ -1,6 +1,4 @@
 from book_class import Book
-
-
 class Booklist():
 	def __init__(self):
 		"""Initialize the empty book list"""
@@ -24,4 +22,3 @@ class Booklist():
 
 	def is_empty(self):
 		"""Return True if the book list is empty, False if not"""
-		pass

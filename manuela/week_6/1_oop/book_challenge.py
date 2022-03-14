@@ -12,6 +12,7 @@ This class and the methods are already imported in this script -- test them here
 from book_list_class import Booklist
 
 
+
 '''
 PART #1.
 In book_list_class.py:
@@ -25,7 +26,9 @@ Print the books attribute of my_library -- it should be an empty list
 Also, print out the type of my_library to see what you get :)
 '''
 print('PART 1\n')
-
+my_library = Booklist()
+print(my_library.books)
+print(type(my_library))
 
 '''
 Part #2:
@@ -45,7 +48,15 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
+my_library.add("Just Mercy", "Bryan Stevenson")
+my_library.add("The New Jim Crow", "Michelle Alexander")
+my_library.add("The Truths We Hold", "Kamala Harris")
+my_library.add("My Grandmother's Hands", "Resmaa Menakem")
 
+#for book in my_library.books:
+ #   print(book.title, book.author)
+#print([{'title': book.title, 'author': book.author} for book in books])
+print(my_library.books)
 
 
 '''
@@ -59,8 +70,9 @@ In this script:
 Once you have finished the method, count the books in my_library and print out the result
 '''
 print('\nPart 3\n')
-
-
+#my_library.count_books
+#print(my_library)
+print(my_library.count_books())
 
 '''
 Part #4:
@@ -76,21 +88,25 @@ Then, print out the books attribute to make sure that book is gone
 '''
 
 print('\nPart 4\n')
+my_library.remove_title("Just Mercy")
+print(my_library.books)
 
 
 '''
 Part #5:
-In book_list_class.py:
+In this script:
 Instantiate another object of class Booklist called nyt_bestsellers
 Then, add 2 books of your choice from the New York Times best sellers lists to nyt_bestsellers using the .add() method
 You can find NYT books here: https://www.nytimes.com/books/best-sellers/
-
-In this script:
 Then, print out the books attribute of nyt_bestsellers
+hook, line, and sinker by tessa bailey;  the body keeps the score by bessel van der kolk
 '''
 
 print('\nPart 5\n')
-
+nyt_bestsellers = Booklist()
+nyt_bestsellers.add('Hook Line and Sinker',  'Tessa Bailey')
+nyt_bestsellers.add('Hook Line and Sinker',  'Tessa Bailey')
+print(nyt_bestsellers.books)
 
 
 '''
@@ -107,3 +123,5 @@ Once you have completed this method, test it out on both my_library and nyt_best
 '''
 
 print('\nBONUS Part 6\n')
+my_library.display_titles()
+nyt_bestsellers.display_titles
