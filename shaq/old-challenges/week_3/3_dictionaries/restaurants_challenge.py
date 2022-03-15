@@ -45,8 +45,28 @@ print("Question 2")
 #         1. name : name of the resturant (string)
 #         2. address: address of the restaurant (string)
 #         3. favourite_dish: your favourite thing to order at the restaurant (string)
+restaurant_1  = {
+    "name": "Chickinn",
+    "address" : "3508 Broadway, New York, NY 10031",
+    "favourite_dish" : "Lobster Mac & Cheese"
+}
+restaurant_2  = {
+    "name": "Palomino Halal Food",
+    "address" : "515 Lenox Ave, New York, NY 10030",
+    "favourite_dish" : "Chicken Over Rice"
+}
+restaurant_3  = {
+    "name": "Caribbean Starr",
+    "address" : "280 Malcolm X Blvd, New York, NY 10027",
+    "favourite_dish" : "Oxtail"
+}
 
 # TODO: Print each dictionary
+print(restaurant_1)
+print(restaurant_2)
+print(restaurant_3)
+
+
 
 # The dictionary for each restaurant should look something like this
 
@@ -67,8 +87,12 @@ Remove the 'favourite_dish' key value pair from that restaurant's dictionary
 '''
 
 # TODO: Remove the 'favourite_dish' key-value pair from one of your 3 restaurants
-# TODO: Print the new dictionary. The new dictionary should only contain 'name' and 'address' for that restaurant
+del restaurant_3["favourite_dish"]
+print(restaurant_3)
 
+
+# TODO: Print the new dictionary. The new dictionary should only contain 'name' and 'address' for that restaurant
+print(restaurant_3)
 print()
 
 print("Question 4")
@@ -78,9 +102,11 @@ Update just this value in that restaurant's dictionary
 '''
 
 # TODO: Update the address field of 1 restaurant
+restaurant_1["address"] = "590 Jerome ave, Bronx, NY 10451"
 # TODO: Print the new address of the restaurant by accessing that field of the restaurant's dictionary
+print(restaurant_1["address"])
 # TODO: Print the updated dictionary.
-
+print(restaurant_1)
 print()
 
 
@@ -90,4 +116,16 @@ Printing out all 3 of our restaurants every time is getting annoying. Let's clea
 '''
 
 # TODO: Put your 3 restaurant dictionaries into a list called `restaurants`
+restaurants = []
+
+restaurants.append(restaurant_1)
+restaurants.append(restaurant_2)
+restaurants.append(restaurant_3)
+print(restaurants)
+
 # TODO: Loop through your list and print out the name and address of each restaurant
+
+restaurant = restaurants
+
+for restaurant in restaurants:
+    print(f"You should checkout {restaurant}")
