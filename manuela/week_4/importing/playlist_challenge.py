@@ -19,7 +19,8 @@ print('Question 3')
 # The song that you add should be a dictionary, with the following key-value pairs
 # 'artist' (string)
 # 'title' (string)
-add_song(my_playlist,{'artist': 'Lauryn Hill', 'title': 'Everything Is Everything'})
+add_song(my_playlist, {'artist': 'Lauryn Hill',
+                       'title': 'Everything Is Everything'})
 '''
 example_song = {'artist': 'Lauryn Hill', 'title': 'Everything Is Everything'}
 '''
@@ -31,11 +32,10 @@ print('Question 4')
 display_playlist(my_playlist)
 
 
-
 print('Question 5')
 # 5 Add 2 more songs to my_playlist, then display it again using the display_playlist() function
-add_song(my_playlist,{'artist': 'yy', 'title': 'yyy'})
-add_song(my_playlist,{'artist': 'xx', 'title': 'xxx' })
+add_song(my_playlist, {'artist': 'yy', 'title': 'yyy'})
+add_song(my_playlist, {'artist': 'xx', 'title': 'xxx'})
 display_playlist(my_playlist)
 print()
 
