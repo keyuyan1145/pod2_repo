@@ -10,6 +10,12 @@ Since subways and buses have different information, the methods and attributes w
 '''
 
 
+#from mailbox import linesep
+
+
+#from asyncio import run_coroutine_threadsafe
+
+
 print('Question 1: Making the SubwayStation Class')
 '''
 Using the Station class below as the parent, make a child class called SubwayStation
@@ -23,21 +29,31 @@ class Station:
     def __init__(self, station_name, location):
         self.station_name = station_name
         self.location = location
+
     
-    def show_info(self):
-        print(f'{self.station_name} station is located at {self.location}')
+    #def show_info(self):
+        # print(f'{self.station_name} station is located at {self.location}')
 
+class SubwayStation(Station):
+     def __init__(self, station_name, location, lines):
+        super().__init__(station_name, location)
+        self.lines = lines
+        #self.routes = routes
 
+    
+     def show_info(self):
+        print(f'{self.station_name} station is located at {self.location}, and {self.lines} lines pass through this station.')
 
 print('Question 2: Make an example subway station')
 '''
 Using your SubwayStation class, instantiate a subway station with the info below. 
 Then run the show_info() method to make sure you get the station_name, location, and lines printed out
-
-station_name: '14th street'
-location: '14th street and 7th avenue'
-lines: ['1', '2', '3', 'L']
+station_name = '14th street'
+location = '14th street and 7th avenue'
+lines = ['1', '2', '3', 'L']
 '''
+our_station1 = SubwayStation("14th street", "14th street and 7th avenue",['1', '2', '3', 'L'] )
+our_station1.show_info()
 
 
 print('Question 3: Making the BusStation Class')
@@ -52,7 +68,23 @@ BusStation should:
 -have additional methods called open_station() and close_station() to open and close the station
 -override the show_info() method from Station to display the bus routes and if the station is open, in addition to the station name and location
 '''
-
+class BusStation(Station):
+    def __init__(self, station_name, location, routes, open=True):
+        super().__init__(station_name, location)
+        self.routes = routes
+        self.open = open
+    def open_station(self):
+        self.open = True
+        print(f'The {self.station_name} is open!')
+    def close_station(self):
+        self.open = False
+        #print(f'The {self.station_name} is closed!')
+    def show_info(self):
+        if self.open == True:
+            print(f'{self.station_name} station located at {self.location} and {self.routes} stops here. The station is open.')
+        else:
+            print(f'{self.station_name} station located at {self.location} is now closed!') 
+print()   
 
 
 
@@ -67,9 +99,15 @@ station_name: 'NYC Megabus Stop'
 location: '34th street and 12th avenue'
 lines: ['Boston', 'DC', 'Philly']
 '''
+our_bus = BusStation("NYC Megabus Stop", "34th Street and 12th avenue", "[Boston, DC, Phylly]")
+our_bus.show_info()
+our_bus.close_station()
+our_bus.show_info()
+
+print()
 
 print('Question 5: Importing your classes')
-
+#from station_planning import *
 '''
 Now, it's time to design a few more stations of your own in another script! 
 
