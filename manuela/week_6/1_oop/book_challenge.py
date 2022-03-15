@@ -26,6 +26,7 @@ Print the books attribute of my_library -- it should be an empty list
 Also, print out the type of my_library to see what you get :)
 '''
 print('PART 1\n')
+
 my_library = Booklist()
 print(my_library.books)
 print(type(my_library))
@@ -48,15 +49,16 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
+
 my_library.add("Just Mercy", "Bryan Stevenson")
 my_library.add("The New Jim Crow", "Michelle Alexander")
 my_library.add("The Truths We Hold", "Kamala Harris")
 my_library.add("My Grandmother's Hands", "Resmaa Menakem")
 
-#for book in my_library.books:
- #   print(book.title, book.author)
-#print([{'title': book.title, 'author': book.author} for book in books])
-print(my_library.books)
+for book in my_library.books:
+    print(book.title, book.author)
+
+
 
 
 '''
@@ -70,8 +72,7 @@ In this script:
 Once you have finished the method, count the books in my_library and print out the result
 '''
 print('\nPart 3\n')
-#my_library.count_books
-#print(my_library)
+
 print(my_library.count_books())
 
 '''
@@ -88,8 +89,12 @@ Then, print out the books attribute to make sure that book is gone
 '''
 
 print('\nPart 4\n')
+
 my_library.remove_title("Just Mercy")
-print(my_library.books)
+for book in my_library.books:
+    print(book.title, book.author)
+
+my_library.display_titles()  
 
 
 '''
@@ -103,25 +108,29 @@ hook, line, and sinker by tessa bailey;  the body keeps the score by bessel van 
 '''
 
 print('\nPart 5\n')
+
 nyt_bestsellers = Booklist()
-nyt_bestsellers.add('Hook Line and Sinker',  'Tessa Bailey')
-nyt_bestsellers.add('Hook Line and Sinker',  'Tessa Bailey')
-print(nyt_bestsellers.books)
+nyt_bestsellers.add('Hook Line and Sinker', 'Tessa Bailey')
+nyt_bestsellers.add('The Body Keeps the Score', 'Bessel Von Der Kolk')
+
+for book in nyt_bestsellers.books:
+    print(book.title, book.author)
 
 
-'''
-BONUS Part #6:
-In book_list_class.py:
-Define a display_titles() method to display all the titles of the books in an object of class Booklist
-The titles should be displayed in alphabetical order!
--The method requires no parameters other than self
+# '''
+# BONUS Part #6:
+# In book_list_class.py:
+# Define a display_titles() method to display all the titles of the books in an object of class Booklist
+# The titles should be displayed in alphabetical order!
+# -The method requires no parameters other than self
 
-HINT: there's a quick way to sort a list in alphabetical order
+# HINT: there's a quick way to sort a list in alphabetical order
 
-In this script:
-Once you have completed this method, test it out on both my_library and nyt_bestsellers
-'''
+# In this script:
+# Once you have completed this method, test it out on both my_library and nyt_bestsellers
+# '''
 
 print('\nBONUS Part 6\n')
+
 my_library.display_titles()
-nyt_bestsellers.display_titles
+nyt_bestsellers.display_titles()
