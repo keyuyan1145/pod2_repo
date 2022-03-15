@@ -1,5 +1,5 @@
-days = ['Sunday', 'Monday', 'Tuesday',
-        'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 # QUESTION 1: For loops with list
 
@@ -12,12 +12,11 @@ for weekday in days:
 # 1.2: Now, instead of printing out the day, let's ask the user what their favorite thing
 # to do is on that day of the week. (Make sure to use an f-string so that the user knows which
 # day they're being asked about.)
-
 activities = []
 for weekday in days:
     user_activity = input(f'What is your favorite activity on {weekday}? ')
     activities.append(user_activity)
-
+    
 # 1.3: We should keep track of the user's favorite things to do so that we can print them out all together.
 # ABOVE your for loop, create a new empty list to hold the user's favorite activities.
 print(activities)
@@ -27,6 +26,7 @@ print(activities)
 # Print out the list after your loop to check if it got populated correctly.
 
 
+
 # 1.5: After your first loop, let's create a new one. As an example, let's say the user's favorite thing to
 # do on mondays is plan their week. This time, we want the output to be something like this:
 # 'On Mondays, your favorite activity is to plan your week.'
@@ -34,10 +34,9 @@ print(activities)
 # of the items in the lists (this will work because the lists are the same length).
 # Each time through this new loop, use the index number to index into each of your lists for the data
 # you need to print out.
-
-for i in range(7):
-    print(f'On {days[i]}, your favorite activity is to {activities[i]}.')
-
+for i in range(7): 
+   print(f'On {days[i]}, your favorite activity is to {activities[i]}.')
+   
 
 # Take a look back at the code you just wrote. Look at how much it does!
 # Often, programmers will be given large tasks, and it's our responsibility to be able to break it down into
@@ -56,27 +55,26 @@ for i in range(7):
 
 # Write a program that loops through the days in the week. Each day, ask the user what the temperature
 
-
 # is. If the temperature is below 50, tell the user to put on a jacket. Or, if the temperature is
 # between 50 and 65, tell the user to put on a sweater. Finally, if the temperature is above 65,
 # tell the user to put on some sunscreen.
-days = ['Sunday', 'Monday', 'Tuesday',
-        'Wednesday', 'Thursday', 'Friday', 'Saturday']
-# create  message variable for <50
-temperature_under_50_degrees = "put on a jacket"
-# create  message variable for between 50 and 65 degrees
-temperature_between_50_and_65_degrees = "put on a sweater"
-# create  message variable for >65 degrees
-temperature_above_65_degrees = "put on some sunscreen"
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+#create  message variable for <50
+temperature_under_50_degrees =  "put on a jacket"
+#create  message variable for between 50 and 65 degrees
+temperature_between_50_and_65_degrees="put on a sweater"
+#create  message variable for >65 degrees
+temperature_above_65_degrees="put on some sunscreen"
 for weekday in days:
-    current_temp = int(
-        input(f'Today is {weekday}. What is the current temperature? '))
+    current_temp=int(input(f'Today is {weekday}. What is the current temperature? '))
     if current_temp < 50:
-        print(temperature_under_50_degrees)
+        print("put on a jacket")
     elif current_temp < 65:
-        print(temperature_between_50_and_65_degrees)
+        print("put on a sweater")
     else:
         print(temperature_above_65_degrees)
+
+
 
 
 # QUESTION 3: For loops with the range function
@@ -84,13 +82,14 @@ for weekday in days:
 # Write a program that asks the user how many times they would like to be wished happy birthday.
 # Then, print out happy birthday that number of times.
 
-
 n = int(input(f'How many times do you want to be wished Happy Birthday? '))
 for i in range(n):
     print("Happy_Birthday")
-# or you could say
+# or you could say 
 # for i in range(int(input(f'How many times do you want to be wished Happy Birthday? ')):
-    # print("Happy_Birthday")
+    #print("Happy_Birthday")
+
+
 
 
 # QUESTION 4: While loops
@@ -100,11 +99,11 @@ for i in range(n):
 # Spring has sprung!
 
 
-# create  message variable for <65
+#create  message variable for <65
 
 while int(input(f'What is the temperature outside? ')) <= 65:
     print('wear a sweater ')
-
+   
 print("Spring has sprung! ")
 
 print("Challenge is complete")

@@ -2,21 +2,27 @@
 
 # prints out what is in your playlist
 # takes one argument: 'playlist' (a list)
+from code import interact
+
+from numpy import integer
+
+
 def display_playlist(playlist):
-	if len(playlist) == 0:
-		print('Playlist is empty!')
-	else:
-		for i in range(len(playlist)):
-			print(f'Track {i+1}: {playlist[i]["plays"]} plays \
+    if len(playlist) == 0:
+        print('Playlist is empty!')
+    else:
+        for i in range(len(playlist)):
+            print(f'Track {i+1}: {playlist[i]["plays"]} plays \
 				  \n\t-{playlist[i]["title"]} by {playlist[i]["artist"]}')
 
 # function to add a song to the playlist
 # takes two arguments: 'playlist' (a list), and 'song' (a dictionary)
-def add_song(playlist, song):
-	# automatically initialize play count of song to 0
-	song['plays'] = 0
-	playlist.append(song)
 
+
+def add_song(playlist, song):
+    # automatically initialize play count of song to 0
+    song['plays'] = 0
+    playlist.append(song)
 
 
 '''
@@ -26,6 +32,10 @@ The function should return an integer value indicating how many songs there are
 '''
 
 
+def get_playlist_length(playlist):
+    '''Returns the length of playlist'''
+    print(len(playlist))
+    return len(playlist)
 
 
 '''
@@ -38,7 +48,7 @@ This function should 'play' the song corresponding to the input track #
 
 For example play_track(my_playlist,3) should print out:
 
-'Now playing track 3, Controversy by Prince' 
+'Now playing track 3, Controversy by Prince'
 Assuming that the third track in your playlist 'Controversy' by 'Prince'
 
 This function should ALSO increase the 'plays' value for that song's dictionary by 1
@@ -46,3 +56,12 @@ So, if 'Controversy' has 0 plays so far, it should now be increased to 1
 '''
 
 
+def play_tract(playlist: list, track: int = 1):
+    '''Displays a trach being played from a playlist and increments the tracks amount of plays'''
+
+    # prints track being played
+    print(
+        f"Now playing track {track}, {playlist[track-1]['title']} by {playlist[track-1]['artist']}")
+
+    # increments plays on track by 1
+    playlist[track-1]['plays'] += 1

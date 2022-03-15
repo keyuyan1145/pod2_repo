@@ -1,6 +1,3 @@
-#date 2/22/2022
-#Manuela and David
-
 print("Challenge: Favourite Restaurants")
 
 print()
@@ -14,7 +11,6 @@ print("Question 1")
 # 1. The latitude and longitude of Four Barrel Coffee
 # 2. The complete address of Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
 # 3. The website of Four Barrel Coffee
-
 
 
 restaurant = {
@@ -37,14 +33,14 @@ restaurant = {
 # TODO: Write code to print the complete address of the Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
 # TODO: Write code to print the URL of the website of Four Barrel Coffee.print(f'Four Barrel Coffee restaurant has a latitude of {restaurant["latitude"]}, and a longitude of {restaurant["longitude"]}')
 
-print(f'The latitude {restaurant["latitude"]}, and longitude {restaurant["longitude"]} of Four Barrel Coffee. ')
+print(
+    f'The latitude {restaurant["latitude"]}, and longitude {restaurant["longitude"]} of Four Barrel Coffee. ')
 print()
-print(f'The address for the Four Barrel Coffee restaurant is {restaurant["address1"]}, {restaurant["city"]}, {restaurant["state"]} {restaurant["zip_code"]}' )
+print(
+    f'The address for the Four Barrel Coffee restaurant is {restaurant["address1"]}, {restaurant["city"]}, {restaurant["state"]} {restaurant["zip_code"]}')
 print()
 print(f'The website url for the restaurant is {restaurant["url"]}')
-
-
-
+print()
 
 
 print()
@@ -57,14 +53,14 @@ print("Question 2")
 #         3. favourite_dish: your favourite thing to order at the restaurant (string)
 restaurant_1 = {
     "name": "Tel-Aviv Kosher Pizza",
-    "address" : "6349 N California Ave, NY 60659",
+    "address": "6349 N California Ave, NY 60659",
     "favourite_dish": "falafel"
 }
 restaurant_2 = {
     "name": "Great New York Food and Beverage_Co",
-    "address" : "3149 W Devon Ave, NY 60659",
+    "address": "3149 W Devon Ave, NY 60659",
     "favourite_dish": "roasted chicken with french fries"
-}   
+}
 restaurant_3 = {
     "name": "Evita Argentinian Steakhouse",
     "address": "6112 N Lincoln Ave, NY 60659",
@@ -124,9 +120,9 @@ print("Question 4")
 # TODO: Update the address field of 1 restaurant
 # TODO: Print the new address of the restaurant by accessing that field of the restaurant's dictionary
 # TODO: Print the updated dictionary.
-restaurant_2["address"]="6112 N Lincoln Ave, NY 60659"
-print(restaurant_2["address"])
-print(restaurant_2)
+restaurant_1["address"] = "6347 N California Ave, NY 60659"
+print(restaurant_1["address"])
+print(restaurant_1)
 print()
 
 
@@ -141,5 +137,4 @@ restaurants = [restaurant_1, restaurant_2, restaurant_3]
 for i in restaurants:
     print(i['name'], i['address'])
     print()
-print("Completed restaurants challenge")
 print("Completed restaurants challenge")
