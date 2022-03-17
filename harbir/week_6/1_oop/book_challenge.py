@@ -25,8 +25,9 @@ Print the books attribute of my_library -- it should be an empty list
 Also, print out the type of my_library to see what you get :)
 '''
 print('PART 1\n')
-
-
+my_library = Booklist()
+print(my_library.books)
+print(type(my_library))
 '''
 Part #2:
 In book_list_class.py:
@@ -45,7 +46,12 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
-
+my_library.add('Just Mercy', 'Bryan Stevenson')
+my_library.add('The New Jim Crow', 'Michelle Alexander')
+my_library.add('The Truths We Hold', 'Kamala Harris')
+my_library.add("The Grandmother's Hands", 'Resmaa Menakem')
+for book in my_library.books:
+    print(book.title, book.author)
 
 
 '''
@@ -59,7 +65,7 @@ In this script:
 Once you have finished the method, count the books in my_library and print out the result
 '''
 print('\nPart 3\n')
-
+print(my_library.count_books())
 
 
 '''
@@ -76,7 +82,9 @@ Then, print out the books attribute to make sure that book is gone
 '''
 
 print('\nPart 4\n')
-
+my_library.remove_title('Just Mercy')
+for book in my_library.books:
+    print(book.title, book.author)
 
 '''
 Part #5:
@@ -90,7 +98,10 @@ Then, print out the books attribute of nyt_bestsellers
 '''
 
 print('\nPart 5\n')
-
+nyt_bestsellers = Booklist()
+nyt_bestsellers.add("House of Sky and Breath", "Sarah J. Maas")
+nyt_bestsellers.add("The Midnight Library", "Matt Haig")
+print(nyt_bestsellers.books)
 
 
 '''
@@ -107,3 +118,6 @@ Once you have completed this method, test it out on both my_library and nyt_best
 '''
 
 print('\nBONUS Part 6\n')
+my_library.display_titles()
+nyt_bestsellers.display_titles()
+print(nyt_bestsellers.is_empty())
