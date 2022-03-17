@@ -10,6 +10,9 @@ Since subways and buses have different information, the methods and attributes w
 '''
 
 
+from tkinter.messagebox import showinfo
+
+
 print('Question 1: Making the SubwayStation Class')
 '''
 Using the Station class below as the parent, make a child class called SubwayStation
@@ -29,11 +32,11 @@ class Station:
 
 class SubwayStation(Station):
     def __init__(self, station_name, location, lines):
-        super().__init__(station_name = '', location = '')
+        super().__init__(station_name, location)
         self.lines = lines
         
     def show_info(self):
-        print(f'{self.station_name} station is located at {self.location} and stops at these {self.lines}')
+        print(f'{self.station_name} station is located at {self.location} and stops at {self.lines}')
 
 
 print('Question 2: Make an example subway station')
@@ -63,7 +66,22 @@ BusStation should:
 
 class BusStation(Station):
     def __init__(self, station_name, location, routes):
-        super().__init__()
+        super().__init__(station_name, location)
+        self.routes = routes
+        self.open = True
+    
+    def open_station(self):
+        self.open = True
+    
+    def closed_station(self):
+        self.open = False
+    
+    def show_info(self):
+        if self.open:
+            print(f'{self.station_name} station is located at {self.location} and stops at {self.routes}')
+        else:
+            print('This Station is closed.')
+
 
 
 
@@ -78,6 +96,12 @@ station_name: 'NYC Megabus Stop'
 location: '34th street and 12th avenue'
 lines: ['Boston', 'DC', 'Philly']
 '''
+bus_station = BusStation('NYC Megabus Stop', '34th street and 12th avenue', ['Boston', 'DC', 'Philly'])
+bus_station.show_info()
+bus_station.closed_station()
+bus_station.show_info()
+bus_station.open_station()
+bus_station.show_info()
 
 print('Question 5: Importing your classes')
 
