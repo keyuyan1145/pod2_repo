@@ -28,7 +28,13 @@ class Station:
         print(f'{self.station_name} station is located at {self.location}')
 
 
+class SubwayStation1(Station):
+    def __init__(self, station_name, location, lines):
+        super().__init__(station_name, location)
+        self.lines=lines
 
+    def show_info(self):
+        print(f'{self.station_name} station is located at {self.location} and lines {self.lines} stop here')
 print('Question 2: Make an example subway station')
 '''
 Using your SubwayStation class, instantiate a subway station with the info below. 
@@ -38,6 +44,9 @@ station_name: '14th street'
 location: '14th street and 7th avenue'
 lines: ['1', '2', '3', 'L']
 '''
+subway_station1=SubwayStation1('14th street', '14th street and 7th avanue', ['1', '2', '3', 'L'])
+subway_station1.show_info()
+        
 
 
 print('Question 3: Making the BusStation Class')
@@ -52,7 +61,24 @@ BusStation should:
 -have additional methods called open_station() and close_station() to open and close the station
 -override the show_info() method from Station to display the bus routes and if the station is open, in addition to the station name and location
 '''
-
+class BusStation(Station):
+    def __init__(self, station_name, location, routes):
+        super().__init__(station_name, location)
+        self.routes=routes
+        self.open=True
+       
+    def open_station(self):
+        self.open=True
+        
+    def close_station(self):
+        self.open=False
+        
+    def show_info(self):
+        if self.open:
+            print(f'{self.station_name} station is located at {self.location}. Routes {self.routes} stop here and the station is open')
+            
+        else:
+            print(f'{self.station_name} station is located at {self.location}. Routes {self.routes} stop here and the station is closed')
 
 
 
@@ -67,6 +93,13 @@ station_name: 'NYC Megabus Stop'
 location: '34th street and 12th avenue'
 lines: ['Boston', 'DC', 'Philly']
 '''
+bus_station1=BusStation('NYC Megabus Stop', '34th street and 12th avenue', ['Boston', 'DC', 'Philly'])
+bus_station1.show_info()
+bus_station1.close_station()
+bus_station1.show_info()
+bus_station1.open_station()
+bus_station1.show_info()
+
 
 print('Question 5: Importing your classes')
 
