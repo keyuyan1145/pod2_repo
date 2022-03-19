@@ -1,10 +1,10 @@
 # You are starting a bike-sharing service. Your first bike station will be at 14th St and 5 Ave.
 # The dictionary below represents your first station.
 
-station = { 
-	'name': 'Station A',
- 	'address': '14th St and 5 Ave',
- 	'bikes': []
+station = {
+    'name': 'Station A',
+    'address': '14th St and 5 Ave',
+    'bikes': []
 }
 
 print('Question 1')
@@ -14,6 +14,12 @@ print('Question 1')
 # Parameters: id (int)
 # Returns: nothing
 
+
+def add(id: int):
+    '''adds bikes to the bikes list'''
+    station['bikes'].append(id)
+
+
 print('')
 
 print('Question 2')
@@ -21,12 +27,24 @@ print('Question 2')
 # Parameters: id (int)
 # Returns: nothing
 
+
+def check_out(id: int):
+    '''checks out a bike (removes it by id) from the bikes list'''
+    station['bikes'].remove(id)
+
+
 print('')
 
 print('Question 3')
 # Create a function 'check_in' that returns a bike (adding it by id) to the bikes list.
 # Parameters: id (int)
 # Returns: nothing
+
+
+def add(id: int):
+    ''''check_in' that returns a bike (adding it by id) to the bikes list'''
+    station['bikes'].append(id)
+
 
 print('')
 
@@ -36,24 +54,59 @@ print('Question 4')
 # Parameters to create object: name (string) and address (string)
 # Returns: BikeStation Object
 
+
+class BikeStation():
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+        self.bikes = []
+
+    def add(self, id):
+        '''Add bikes to attribute based oxn list or int passed in'''
+        if type(id) == int:
+            self.bikes.append(id)
+        if type(id) == list:
+            self.bikes = self.bikes + id
+
+    def check_out(self, id: int):
+        self.bikes.remove(id)
+
+    def check_in(self, id: int):
+        self.bikes.append(id)
+
+
 print('')
 
 print('Question 5')
 # You will create station objects using BikeStation class and save them to variables.
-# 5.1 - First station, name is Station A. Give it an address of your own choosing. 
+# 5.1 - First station, name is Station A. Give it an address of your own choosing.
 # 5.2 - Second station, name is Station B. Give it an address of your own choosing.
+
+station_a = BikeStation("Station A", "1234 S South St")
+station_b = BikeStation("Station B", "4321 N North Ave")
 
 print('')
 
 print('Question 6')
-# 6.1 - Add bikes 1, 2, 3 to Station A. 
+# 6.1 - Add bikes 1, 2, 3 to Station A.
 # 6.2 - Add bikes 4, 5, 6 to Station B.
 # Print the bikes attributes for both Station A and Station B objects.
 
+station_a.add([1, 2])
+station_a.add(3)
+station_b.add([4, 5, 6])
+
+print(station_a.bikes)
+print(station_b.bikes)
 print('')
 
 print('Question 7')
 # 7.1 - Check out bike 3 from Station A
 # 7.2 - Check out bike 5 from  Station B
-# 7.3 - Check in bike 3 to Station B 
+# 7.3 - Check in bike 3 to Station B
 # Print the bikes attributes for both Station A and Station B objects.
+station_a.check_out(3)
+station_b.check_out(5)
+station_b.check_in(3)
+print(station_a.bikes)
+print(station_b.bikes)
