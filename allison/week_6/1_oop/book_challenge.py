@@ -48,11 +48,13 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')#deleted title= and author= to try to make lillies way work
-my_library.add(title='Just Mercy', author='Bryan Stevenson')
-my_library.add(title='The New Jim Crow', author='Michelle Alexander')
-my_library.add(title='The Truths We Hold', author='Kamala Harris')
-my_library.add(title='My Grandmothers Hands',author='Resmaa Menakem')
-print(my_library.books)
+my_library.add('Just Mercy', 'Bryan Stevenson')
+my_library.add('The New Jim Crow', 'Michelle Alexander')
+my_library.add('The Truths We Hold', 'Kamala Harris')
+my_library.add('My Grandmothers Hands', 'Resmaa Menakem')
+
+for book in my_library.books:
+    print(book.title, book.author)
 
 
 
@@ -86,7 +88,11 @@ Then, print out the books attribute to make sure that book is gone
 
 print('\nPart 4\n')
 my_library.remove_title('Just Mercy')
-print(my_library.books)
+
+for book in my_library.books:
+    print(book.title, book.author)
+
+
 
 '''
 Part #5:
@@ -102,10 +108,11 @@ Then, print out the books attribute of nyt_bestsellers
 print('\nPart 5\n')
 nyt_bestsellers=Booklist()
 
-nyt_bestsellers.add(title='Cloud Cuckoo Land', author='Anthony Doerr')
-nyt_bestsellers.add(title='House of Sky and Breath', author='Sarah J. Maas')
+nyt_bestsellers.add('Cloud Cuckoo Land', 'Anthony Doerr')
+nyt_bestsellers.add('House of Sky and Breath', 'Sarah J. Maas')
 
-print(nyt_bestsellers.books)
+for book in nyt_bestsellers.books:
+    print(book.title, book.author)
 
 
 '''

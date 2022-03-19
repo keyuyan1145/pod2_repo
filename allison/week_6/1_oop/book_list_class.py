@@ -8,9 +8,7 @@ class Booklist():
 
 	def add(self, title, author):
 		"""Add a Book object with the given title and author to the book list"""
-		book={}
-		book['title']=title
-		book['author']=author
+		book=Book(title, author)
 		self.books.append(book)
 
 	def count_books(self):
@@ -20,17 +18,20 @@ class Booklist():
 	def remove_title(self, title):
 		"""Remove a book from the book list"""
 		for book in self.books:
-			self.books.remove(book)
+			if book.title==title:
+				self.books.remove(book)
 
 	def display_titles(self):
 		"""Print out all titles currently in the book list"""
 		titles=[]
 		for book in self.books:
-			titles.append(book['title'])
+			titles.append(book.title)
 
 		titles.sort()
 		print(titles)
 
 	def is_empty(self):
 		"""Return True if the book list is empty, False if not"""
-		pass
+		if self.books:
+			return False
+		return True
