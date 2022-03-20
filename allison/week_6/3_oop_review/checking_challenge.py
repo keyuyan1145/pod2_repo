@@ -2,28 +2,59 @@ print('Question 1')
 
 
 class CheckingAccount():
-    def __init__(self, account_holder, account_number):
-        self.account_holder = account_holder
-        self.account_number = account_number
-        self.balance = 0
+	def __init__(self, account_holder, account_number):
+		self.account_holder = account_holder
+		self.account_number = account_number
+		self.balance = 0
 
-    '''
+	def deposit(self, amount):
+		try:
+			self.balance=self.balance+amount
+			return self.balance
+
+		except:
+			print('System Error: Deposit amount not valid')
+
+	def withdraw(self, amount):
+		withdraw_limit=2000
+
+		try:
+			if amount>withdraw_limit:
+				print('The amount exceeds the withdraw limit')
+
+			elif (self.balance-amount)<0:
+				print("insufficient funds")
+
+			else:
+				self.balance=self.balance-amount
+				return self.balance 
+
+		except:
+			print('System Error: Withdrawal amount not valid')
+
+
+
+	
+
+	'''
 	1.1 Create method 'deposit' that adds to the account balance
 		- Parameter: amount (int or float)
 		- Returns: balance (after adding amount)
 	'''
-
-    '''
+	
+		
+	'''
 	1.2 Create method 'withdraw' that subtracts from the account balance
 		- Parameter: amount (int or float)
 		- Returns: balance (after subtracting amount)
+	
 
 	Additional requirements:
 		- Add an attribute during initialization 'withdrawal_limit' with 2000 set as it's default
 		- If amount exceeds the current balance, print 'Insufficient funds'
 		- If amount exceeds the withdrawal_limit, print 'Withdrawal amount exceeds the max withdrawal limit'
 	'''
-
+	
 
 print('')
 
@@ -33,6 +64,12 @@ print('Question 2')
 # 2.2 Deposit the amount of 1500
 # 2.3 Withdraw the amount of 4000
 # 2.4 Print the account balance
+
+ali=CheckingAccount('Allison Kroboth', 1197537)
+ali.deposit(1500)
+ali.withdraw(4000)
+
+print(ali.balance)
 
 print('')
 
@@ -44,8 +81,10 @@ print('Question 3')
 # If an exception occurs, print 'System Error: Deposit amount not valid'
 
 # 3.2 - Call the deposit method with the argument: 'cats' (string)
+ali.deposit('cats')
 
 # 3.3 - In the 'withdraw' method, handle exceptions by wrapping code block with try/except.
 # If an exception occurs, print 'System Error: Withdrawal amount not valid'
 
 # 3.4 - Call the withdraw method with the argument: {} (dictionary)
+ali.withdraw({})
