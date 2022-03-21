@@ -12,12 +12,23 @@
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
 
 
+def validate_user_input() -> int:
+    '''Tries to validate a number given by a user and returns that number'''
+
+    # Get number from user
+    while True:
+        try:
+            user_input_number = int(input('Please enter a number\n'))
+            return user_input_number
+        # catch errors
+        except ValueError:
+            print('You did not enter a valid number, please try again')
+
 
 # Once you are done, uncomment the two lines below to ensure that your code works as expected
 
-# user_number = validate_user_input()
-# print(f'The number the user entered is {user_input}.')
-
+user_number = validate_user_input()
+print(f'The number the user entered is {user_number}.')
 
 
 # Question 2: print_tenth_item
@@ -29,8 +40,23 @@
 # NOTE: What type of error does python throw if you try to index into a list past the number of items in it?
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
 
+def print_tenth_item(top_ten) -> str:
+    '''Prints the 10th item in a list given'''
+
+    try:
+        # get the tenth item
+        tenth_item = top_ten[9]
+        # print the item
+        print(f'The 10th item in the list given is {tenth_item}')
+
+    except IndexError:
+        # print error
+        print("There were less then ten item's in the list given")
 
 # Once you are done, uncomment the two lines below to ensure that your code works as expected
 
-# print_tenth_item(['a', 'b', 'c'])  # Should print out that there are not ten items in the list
-# print_tenth_item([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])  # Should print out the 10th item in the list
+
+# Should print out that there are not ten items in the list
+print_tenth_item(['a', 'b', 'c'])
+# Should print out the 10th item in the list
+print_tenth_item([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
