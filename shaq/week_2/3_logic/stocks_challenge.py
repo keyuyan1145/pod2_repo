@@ -12,9 +12,7 @@ msft = 200
 
 print("Challenge 3.2.1: Taking user input")
 # TODO: Write code to ask the client his name and save it to a variable.
-name = input("whats your name?")
 # TODO: Write code to ask the client his savings and save it to another variable.
-savings = input("whats your savings?")
 # TODO: Write code to ask the client the stock he is interested in and save it to another variable, as shown below.
 stock = input("Which stock are you interested in? Type 'amzn' for Amazon, 'aapl' for Apple, 'fb' for Facebook, 'goog' for Google and 'msft' for Microsoft.")
 print()
@@ -22,24 +20,14 @@ print()
 print("Challenge 3.2.2: Perform user-specific calculations")
 # TODO: You have all 3 user inputs stores in variables. Based on that, write conditional (if-elif-else) statements to find out the number of stocks of the company that can be purchased with the savings amount.
 
-
-#Your code should look like this:
+'''
+Your code should look like this:
 
 if stock == "amzn":
-    print(savings / amazon)
-    
-elif stock == "aapl":
-    print(savings / apple)
-
-elif stock == "fb":
-    print(savings / fb)
-
-elif stock == "goog":
-    print(savings / google)
-
-elif stock == "msft":
-    print(savings / msft)
-
+    ...
+elif ...
+else ...
+'''
 
 print()
 

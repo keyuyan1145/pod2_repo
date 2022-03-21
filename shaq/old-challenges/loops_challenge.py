@@ -27,7 +27,7 @@ print(activities)
 
 # 1.4: Now, back in your for loop, append each of the user's answers into your new list.
 # Print out the list after your loop to check if it got populated correctly.
-
+print(activities)
 
 
 # 1.5: After your first loop, let's create a new one. As an example, let's say the user's favorite thing to
@@ -107,14 +107,10 @@ for i in range(num_wishes):
 
 temp = 65
 
-
-temp = int(input("what temperature is it outside?"))
-if (temp < 65): 
-    print('wear a sweater')
-
-
-print('spring has sprung!')
-
+while temperature < 65:
+    print('Wear a sweater!')
+    temperature = int(input(f'What is the temperature today?'))
+print('Spring has sprung')
 
     
 
