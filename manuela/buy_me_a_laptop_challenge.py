@@ -1,14 +1,17 @@
 # Challenge 1
+import types
+
+
 print("Challenge 1: All possible laptops\n")
 
 print("Question 1: You are given a list containing the laptop names. Print the names of each the laptops separately.")
 all_laptops = ["Apple MacBook Pro", "Asus Zenbook", "Dell XPS", "Lenovo IdeaPad", "Apple MacBook Air", "Sony Viao"]
 
-
 # TODO: Write code to print all laptop names
 print("All laptops names:")
 for laptop in all_laptops:
     print(laptop)
+
 
 # Challenge 2
 
@@ -39,7 +42,7 @@ laptops = [
                     "screen_size": "16-inch",
                     "cpu": ["2.6GHz 6-core 9th-generation Intel Core i7 processor", "2.3GHz 8-core 9th-generation Intel Core i9 processor"],
                     "ram": ["16GB"],
-                    "storage": ["512 GB SSD", "1 TB SSD"],
+                    "storage": ["512 GB SSD",  "1 TB SSD"],
                     "colors": ["space gray", "silver"],
                     "price": [2399, 2799]
                 }
@@ -75,36 +78,34 @@ laptops = [
 ]
 
 # TODO: Write code to print out the MacBook Pro url 
-mac_book_url = laptops[0]['url']
-print(f'\nThe url for the Mac Book is {mac_book_url}.')
-
+print(f"the url for macbook is {laptops[0]['url']}")
+print()
 # TODO: Write code to print all possible prices of the 16-inch MacBook Pro.
-mac_book_prices = laptops[0]['types'][1]['price']
-print(f'\nThe prices for a 16-inch Mac Book are {mac_book_prices}')
+print(f"All possible prices for 16-inch MacBook Pro {laptops[0]['types'][1]['price']}\n")
 
 # TODO: Write code to print all the color options for Dell XPS 13.
-xps13_colors = laptops[1]['types'][0]['colors']
-print(f'\nThe DELL XPS13 colors are {xps13_colors}')
-
+print(f"All color options for Dell XPS 13 are {laptops[1]['types'][0]['colors']}\n")
 # TODO: Write code to print the description of Dell XPS laptop.
-xps_description=laptops[1]['description']
-print(f'\nDescription for XPS Laptop:{xps_description}')
+print(f"All color options for Dell XPS are {laptops[1]['description']}\n")
 
 print("Question 2: Out of Stock laptops")
 print("Suppose that the 13-inch MacBook Pro in space gray color is sold out. Also, the same laptop with 1 TB storage is out of stock as well. Update the list of dictionaries such that these options are removed. Print the updated dictionary.")
 
-# TODO: Update the laptops dictionary.
-laptops[0]['types'][0]['colors'].pop(0)
-laptops[0]['types'][1]['storage'].pop(1)
+laptops[0]['types'][0]['colors'].remove('space gray')
+laptops[0]['types'][1]['storage'].remove('1 TB SSD')
 
+# TODO: Update the laptops dictionary.
 # TODO: Print the new dictionary.
-print(laptops)
+        
+print(laptops)   
+
 
 print("Question 3: listing all the prices")
 print("Time to look at the range of prices. Using a nested loops, print out all possible computer prices")
-
+for i in laptops:
+    print(f"\nThe prices for the {i['productName']} are: ")
+    for j in i['types']:
+        for k in j['price']:
+            price_list = "${:,.2f}".format(k)
+            print(price_list)
 # TODO: print out all possible prices for the laptops
-for laptop in laptops:
-    for type in laptop['types']:
-        for prices in type['price']:
-            print(prices)
