@@ -25,7 +25,9 @@ Print the books attribute of my_library -- it should be an empty list
 Also, print out the type of my_library to see what you get :)
 '''
 print('PART 1\n')
-
+my_library=Booklist()
+print(my_library.books)
+print(type(my_library))
 
 '''
 Part #2:
@@ -42,10 +44,13 @@ The New Jim Crow - Michelle Alexander
 The Truths We Hold - Kamala Harris
 My Grandmother's Hands - Resmaa Menakem
 
+
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
-
+my_library.add('just mercy', 'bryan stevenson')
+my_library.add()
+print(my_library.books)
 
 
 '''
