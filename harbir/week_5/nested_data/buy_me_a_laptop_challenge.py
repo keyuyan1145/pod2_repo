@@ -7,7 +7,8 @@ all_laptops = ["Apple MacBook Pro", "Asus Zenbook", "Dell XPS", "Lenovo IdeaPad"
 
 # TODO: Write code to print all laptop names
 print("All laptops names:")
-
+for laptop in all_laptops:
+    print(laptop)
 
 # Challenge 2
 
@@ -74,21 +75,36 @@ laptops = [
 ]
 
 # TODO: Write code to print out the MacBook Pro url 
+mac_book_url = laptops[0]['url']
+print(f'\nThe url for the Mac Book is {mac_book_url}.')
 
 # TODO: Write code to print all possible prices of the 16-inch MacBook Pro.
+mac_book_prices = laptops[0]['types'][1]['price']
+print(f'\nThe prices for a 16-inch Mac Book are {mac_book_prices}')
 
 # TODO: Write code to print all the color options for Dell XPS 13.
+xps13_colors = laptops[1]['types'][0]['colors']
+print(f'\nThe DELL XPS13 colors are {xps13_colors}')
 
 # TODO: Write code to print the description of Dell XPS laptop.
-
+xps_description=laptops[1]['description']
+print(f'\nDescription for XPS Laptop:{xps_description}')
 
 print("Question 2: Out of Stock laptops")
 print("Suppose that the 13-inch MacBook Pro in space gray color is sold out. Also, the same laptop with 1 TB storage is out of stock as well. Update the list of dictionaries such that these options are removed. Print the updated dictionary.")
 
 # TODO: Update the laptops dictionary.
+laptops[0]['types'][0]['colors'].pop(0)
+laptops[0]['types'][1]['storage'].pop(1)
+
 # TODO: Print the new dictionary.
+print(laptops)
 
 print("Question 3: listing all the prices")
 print("Time to look at the range of prices. Using a nested loops, print out all possible computer prices")
 
 # TODO: print out all possible prices for the laptops
+for laptop in laptops:
+    for type in laptop['types']:
+        for prices in type['price']:
+            print(prices)

@@ -6,12 +6,21 @@ class CheckingAccount():
         self.account_holder = account_holder
         self.account_number = account_number
         self.balance = 0
+        self.withdrawal_limit = 2000
 
     '''
 	1.1 Create method 'deposit' that adds to the account balance
 		- Parameter: amount (int or float)
 		- Returns: balance (after adding amount)
 	'''
+
+    def deposit(self, amount):
+        '''Add amount to balance of account'''
+        try:
+            self.balance = self.balance + amount
+            return self.balance
+        except:
+            print('System Error: Deposit amount not valid')
 
     '''
 	1.2 Create method 'withdraw' that subtracts from the account balance
@@ -24,6 +33,20 @@ class CheckingAccount():
 		- If amount exceeds the withdrawal_limit, print 'Withdrawal amount exceeds the max withdrawal limit'
 	'''
 
+    def withdraw(self, amount):
+        '''withdraw amount from balance'''
+
+        try:
+            if amount > self.withdrawal_limit:
+                print('Withdrawal amount exceeds the max withdrawal limit')
+            elif (self.balance - amount) < 0:
+                print('Insufficient funds')
+            else:
+                self.balance = self.balance + amount
+                return self.balance
+        except:
+            print('System Error: Withdrawal amount not valid')
+
 
 print('')
 
@@ -33,6 +56,12 @@ print('Question 2')
 # 2.2 Deposit the amount of 1500
 # 2.3 Withdraw the amount of 4000
 # 2.4 Print the account balance
+
+reid08 = CheckingAccount('Blaine Reid', '0991238')
+reid08.deposit(1500)
+reid08.withdraw(4000)
+print(reid08.balance)
+
 
 print('')
 
@@ -44,8 +73,10 @@ print('Question 3')
 # If an exception occurs, print 'System Error: Deposit amount not valid'
 
 # 3.2 - Call the deposit method with the argument: 'cats' (string)
+reid08.deposit('cats')
 
 # 3.3 - In the 'withdraw' method, handle exceptions by wrapping code block with try/except.
 # If an exception occurs, print 'System Error: Withdrawal amount not valid'
 
 # 3.4 - Call the withdraw method with the argument: {} (dictionary)
+reid08.withdraw({})

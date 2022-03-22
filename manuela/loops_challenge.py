@@ -1,3 +1,4 @@
+
 days = ['Sunday', 'Monday', 'Tuesday',
         'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
@@ -12,7 +13,6 @@ for weekday in days:
 # 1.2: Now, instead of printing out the day, let's ask the user what their favorite thing
 # to do is on that day of the week. (Make sure to use an f-string so that the user knows which
 # day they're being asked about.)
-
 activities = []
 for weekday in days:
     user_activity = input(f'What is your favorite activity on {weekday}? ')
@@ -34,7 +34,6 @@ print(activities)
 # of the items in the lists (this will work because the lists are the same length).
 # Each time through this new loop, use the index number to index into each of your lists for the data
 # you need to print out.
-
 for i in range(7):
     print(f'On {days[i]}, your favorite activity is to {activities[i]}.')
 
@@ -56,7 +55,6 @@ for i in range(7):
 
 # Write a program that loops through the days in the week. Each day, ask the user what the temperature
 
-
 # is. If the temperature is below 50, tell the user to put on a jacket. Or, if the temperature is
 # between 50 and 65, tell the user to put on a sweater. Finally, if the temperature is above 65,
 # tell the user to put on some sunscreen.
@@ -72,9 +70,9 @@ for weekday in days:
     current_temp = int(
         input(f'Today is {weekday}. What is the current temperature? '))
     if current_temp < 50:
-        print(temperature_under_50_degrees)
+        print("put on a jacket")
     elif current_temp < 65:
-        print(temperature_between_50_and_65_degrees)
+        print("put on a sweater")
     else:
         print(temperature_above_65_degrees)
 
@@ -83,7 +81,6 @@ for weekday in days:
 
 # Write a program that asks the user how many times they would like to be wished happy birthday.
 # Then, print out happy birthday that number of times.
-
 
 n = int(input(f'How many times do you want to be wished Happy Birthday? '))
 for i in range(n):
