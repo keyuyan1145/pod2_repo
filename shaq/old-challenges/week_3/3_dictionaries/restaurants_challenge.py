@@ -14,6 +14,7 @@ Go through the dictionary and print out the following 3 pieces of information ab
 '''
 
 
+
 restaurant = {
     "name": "Four Barrel Coffee",
     "url": "https://www.yelp.com/biz/four-barrel-coffee-san-francisco",
@@ -33,9 +34,16 @@ restaurant = {
 print(restaurant)
 
 # TODO: Write code to print the latitude and longitude of Four Barrel Coffee.
+print(restaurant["latitude"])
+print(restaurant["longitude"])
 # TODO: Write code to print the complete address of the Four Barrel Coffee, formatted as a string - it should include the address, city, state and the zip code.
-# TODO: Write code to print the URL of the website of Four Barrel Coffee.
+city = restaurant["city"]
+address = restaurant["address1"]
+print(f"the address of Four Barrel Coffee is located in {city} at {address}")
 
+
+# TODO: Write code to print the URL of the website of Four Barrel Coffee.
+print(restaurant["url"])
 
 print()
 
