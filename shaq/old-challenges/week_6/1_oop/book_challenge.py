@@ -26,6 +26,9 @@ Also, print out the type of my_library to see what you get :)
 '''
 print('PART 1\n')
 
+my_library = Booklist()
+print(my_library.books)
+print(type(my_library))
 
 '''
 Part #2:
@@ -45,8 +48,12 @@ My Grandmother's Hands - Resmaa Menakem
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
 print('\nPart 2\n')
+my_library.add('Just Mercy', 'Bryan Stevenson')
+my_library.add('The New Jim Crow', 'Michelle Alexander')
+my_library.add('The Truths We Hold', 'Kamala Harris')
+my_library.add("My Grandmother's Hands", 'esmaa Menakem')
 
-
+print(my_library.books)
 
 '''
 Part #3:
@@ -60,7 +67,7 @@ Once you have finished the method, count the books in my_library and print out t
 '''
 print('\nPart 3\n')
 
-
+print(my_library.count_books())
 
 '''
 Part #4:
@@ -76,7 +83,11 @@ Then, print out the books attribute to make sure that book is gone
 '''
 
 print('\nPart 4\n')
+my_library.remove_title("Just Mercy")
+for book in my_library.books:
+    print(book.title, book.author)
 
+my_library.display_titles()
 
 '''
 Part #5:
@@ -91,8 +102,13 @@ Then, print out the books attribute of nyt_bestsellers
 
 print('\nPart 5\n')
 
+nyt_bestsellers = Booklist()
 
+nyt_bestsellers.add('Make it stick', 'Peter C. Brown')
+nyt_bestsellers.add('The Power Of HABIT', 'Charles Duhigg')
 
+for book in nyt_bestsellers:
+    print(book.title, book.author)
 '''
 BONUS Part #6:
 In book_list_class.py:
