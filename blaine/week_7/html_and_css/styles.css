@@ -57,3 +57,30 @@ img {
   margin: 20px 10px;
   padding: 20px;
 }
+.center {
+  text-align: center;
+}
+.font_verdana {
+  font-family: Verdana;
+}
+.green {
+  color: green;
+}
+#fact1 {
+  color: pink;
+}
+#fact2 {
+  color: purple;
+}
+#fact3 {
+  color: green;
+  font-style: italic;
+}
+form {
+  font-weight: bold;
+}
+.center_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
