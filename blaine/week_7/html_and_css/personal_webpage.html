@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Blaine's Personal Website</title>
+  </head>
+
+  <body>
+    <!-- SECTION - HEAD -->
+    <head class="section">
+      <h1 id="title" class="center">SWE and Dev Blaine Reid</h1>
+    </head>
+
+    <!-- SECTION - LIST -->
+    <div class="section">
+      <ol id="facts" class="font_verdana">
+        Fun Facts About Me:
+        <li id="fact1">I am a Huge Nerd</li>
+        <li id="fact2">I love coding</li>
+        <li id="fact3">I am buying a new house!</li>
+      </ol>
+    </div>
+
+    <!-- SECTION - QUOTE -->
+    <div class="section">
+      <h2 id="quote" class="">My Favorite Quote</h2>
+      <p class="font_verdana green">
+        "Every time you are temptedto react in the same old way, ask if you want
+        to be a prisoner of the past or a pioneer of the future"
+        <span>- Deepak Chopra</span>
+      </p>
+    </div>
+
+    <!-- SECTION - FORM -->
+    <div class="section">
+      <form>
+        <label for="name" class="name">
+          Your Name:
+          <input type="text" name="name" id="name" placeholder="Your name..." />
+        </label>
+        <label for="age">
+          Your Age:
+          <input type="number" name="age" id="age" placeholder="Your age..." />
+        </label>
+        <fieldset>
+          <legend>Favorite Coding Language</legend>
+          <label for="C">C</label>
+          <input type="radio" name="fav_language" id="C" value="C" />
+          <label for="C#">C#</label>
+          <input type="radio" name="fav_language" id="C#" value="C#" />
+          <label for="C++">C++</label>
+          <input type="radio" name="fav_language" id="C++" value="C++" />
+          <label for="Python">Python</label>
+          <input type="radio" name="fav_language" id="Python" value="Python" />
+          <label for="HTML">HTML</label>
+          <input type="radio" name="fav_language" id="HTML" value="HTML" />
+          <label for="JavaScript">JavaScript</label>
+          <input
+            type="radio"
+            name="fav_language"
+            id="JavaScript"
+            value="JavaScript"
+          />
+          <label for="Ruby">Ruby</label>
+          <input type="radio" name="fav_language" id="Ruby" value="Ruby" />
+          <label for="Other">Other</label>
+          <input type="radio" name="fav_language" id="Other" value="Other" />
+        </fieldset>
+        <button type="button" id="greet">Click Me</button>
+      </form>
+    </div>
+
+    <!-- SECTION - LINKS -->
+    <div class="section">
+      <h2 id="visit">Visit</h2>
+      <a id="github" href="https://github.com/Blaine-Reid" target="_blank">
+        <img src="./github.png" alt="GitHub" />
+      </a>
+      <div>
+        <a href="https://www.mythictable.com/" target="_blank">
+          <img src="./mythic_logo.svg" alt="Mythic Table Logo" />
+        </a>
+      </div>
+
+      <div>
+        <a
+          href="https://www.thecoderpedia.com/blog/programming-memes/"
+          target="_blank"
+        >
+          <img
+            src="https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Memes-Programmer-while-sleeping.jpg"
+            alt="Can't Sleep Meme"
+          />
+        </a>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const btn = document.getElementById("greet");
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      let name = document.getElementById("name").value;
+      let age = document.getElementById("age").value;
+      let language = document.querySelector(
+        "input[name='fav_language']:checked"
+      ).value;
+
+      if (language !== "Other") {
+        alert(
+          `${name}, your are ${age} years old and your favorite coding language is ${language}`
+        );
+      } else {
+        alert(
+          `${name}, your are ${age} years old and your favorite language wasn't on the list`
+        );
+      }
+    });
+  </script>
+</html>
