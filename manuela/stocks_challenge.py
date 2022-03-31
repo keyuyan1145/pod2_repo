@@ -12,14 +12,15 @@ msft = 200
 
 print("Challenge 3.2.1: Taking user input")
 # TODO: Write code to ask the client his name and save it to a variable.
-client = input("Enter your name: ") 
-print(client) 
+client = input("Enter your name: ")
+print(client)
 
 # TODO: Write code to ask the client his savings and save it to another variable.
-investment_amount = input("How much of your savings do want to invest?: ") #write your input
+investment_amount = input(
+    "How much of your savings do want to invest?: ")  # write your input
 
-investment_amount = (int(investment_amount)) #change string to int
-print(type(investment_amount)) #checking the type of investment_amount input
+investment_amount = (int(investment_amount))  # change string to int
+print(type(investment_amount))  # checking the type of investment_amount input
 
 # TODO: Write code to ask the client the stock he is interested in and save it to another variable, as shown below.
 stock = input("Which stock are you interested in? Type 'amzn' for Amazon, 'aapl' for Apple, 'fb' for Facebook, 'goog' for Google and 'msft' for Microsoft.")
@@ -75,25 +76,12 @@ elif stock.startswith('aapl'):
     shares = f'{investment_amount/aapl}'
 elif stock.startswith('fb'):
     shares = f'{investment_amount/fb}'
-elif stock.startswith('goog'):  
+elif stock.startswith('goog'):
     shares = f'{investment_amount/goog}'
 elif stock.startswith('msft'):
     shares = f'{investment_amount/msft}'
 else:
     print('There has been an input error. Please try again')
-   
 
-if stock == ('amzn'):
-    shares = f'{investment_amount/amzn}'
-elif stock.startswith('aapl'):
-    shares = f'{investment_amount/aapl}'
-elif stock.startswith('fb'):
-    shares = f'{investment_amount/fb}'
-elif stock.startswith('goog'):  
-    shares = f'{investment_amount/goog}'
-elif stock.startswith('msft'):
-    shares = f'{investment_amount/msft}'
-#else:
-    #print('There has been an input error. Please try again')
 
 print(f'{client} has ${investment_amount} in savings. And he can buy {shares} shares in {stock} stock. ')
