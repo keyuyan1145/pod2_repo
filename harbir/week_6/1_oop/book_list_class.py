@@ -19,7 +19,8 @@ class Booklist():
 	def remove_title(self, title):
 		"""Remove a book from the book list"""
 		for book in self.books:
-			self.books.remove(book)
+			if book.title == title:
+				self.books.remove(book)
 
 	def display_titles(self):
 		"""Print out all titles currently in the book list"""
