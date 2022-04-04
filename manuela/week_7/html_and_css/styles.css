@@ -1,27 +1,27 @@
 .center {
-    text-align: center;
+  text-align: center;
 }
 .font_verdana {
-    font-family: Verdana;
+  font-family: Verdana;
 }
-.green {
-    color: green;
+.blue {
+  color: blue;
 }
 #fact1 {
-    color: pink;
+  color: blue;
 }
 #fact2 {
-    color: purple;
+  color: orchid;
 }
 #fact3 {
-    color: green;
-    font-style: italic;
+  color: green;
+  font-style: bold;
 }
 form {
-    font-weight: bold;
+  font-weight: bold;
 }
 .center_img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

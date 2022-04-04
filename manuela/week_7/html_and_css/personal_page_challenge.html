@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <!-- this is the name of the tab -->
+    <head>
+        <meta charset="utf-8" />
+        <title>Manuela's Demo Page</title>
+        <br><br><br><br>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    
+    <!-- here is the background color -->
+    <body style="background-color:honeydew;">
+        
+        <!-- Here's all the content -->
+        <h1 class="center">Welcome to Manuela's Website</h1>
+        <br><br><br>
+      
+        <!-- facts about myself in an unordered list -->
+        <ul class="font_verdana">
+            <li id='fact1'>I am learning to program in python, with a great teaching team</li>
+            <li id='fact2'>I also like doing stats and data visualization with R</li>
+            <li id='fact3'>I'm a student at Justice Through Code</li>
+            <br><br>
+        </ul>
+       
+        <!-- Adding a paragraph on JTC now-->
+        <h2 class="left" id='fact1'>Here is a segment from Justice thru Code's description</h2>
+        <p class="justify" "blue font_verdana"  style="width:75%"><b>Justice Through Code (JTC) <b> works to solve the crisis of mass incarceration by offering life-changing access to career-track opportunities in the technology industry to people impacted by the mass incarceration crisis. <br><br>
+        <b>JTC seeks to tackle mass incarceration by addressing two of the most significant contributors to recidivism: a lack of job training and the subsequently high rates of unemployment for the formerly incarcerated. <br><br>
+        In response to these challenges, JTC aims to equip participants with the requisite skills to embark on a sustainable career in the tech industry through a semester-long coding intensive that includes interpersonal skills training and networking opportunities​.<br>The goal is for JTC students to emerge as competitive applicants for jobs, internships, or future job/tech training​.</p>
+        <br><br><br><br>
+        
+        <!-- link to github and link to JTC github -->
+        <p class="center">
+        <a href="https://github.com/1mfarhi" target="_blank">Manuela's Github Page</a>
+            <br><br>
+        <a href="https://github.com/Justice-Through-Code" target="_blank">To visit JTC Github Page</a></</p>
+        
+        <!-- images side by side and centered in paragraph JTC on the left and Turning Point on the right -->
+            <p class="center">
+        
+            <img src="https://centerforjustice.columbia.edu/sites/default/files/styles/cu_crop/public/content/Columbia%20University%20Banner%20Image.jpg?h=9a03d828&itok=dOhNr8I6"
+            width="450"
+            height="300"
+            alt="JTC photo"/>
+            <!-- this gives space between images -->
+            &nbsp; &nbsp; &nbsp; &nbsp; 
+        
+        
+        
+        <img src="turning point.jpg"
+            width="450"
+            height="300"
+            alt="turning point photo"
+        />
+        </p>
+        <br><br><br><br>
+        
+        <!-- the survey in form style-->
+        <h2 id='fact1'>Here's my survey</h2>
+        <form>
+            <label for="firstname">First name:</label>
+            <input name="firstname" type="text" value="" placeholder="e.g. Manuela"/>
+            <!-- give space between choice boxes -->
+            &nbsp; &nbsp;
+           
+            <label for="lastname">Last Name:</label>
+            <input name="lastname" type="text" value="" placeholder="e.g. Farhi"/>
+            <!-- give space between choice boxes -->
+            &nbsp; &nbsp;
+            
+            <label for="phonenumber">Phone number:</label>
+            <input name="phonenumber" type="text" value="" placeholder="555-555-5555"/>
+            <br><br>
+           
+            <!-- Bonus radio buttons -->
+           What is your preferred language? <br><br>
+          
+           <!-- value="English" --> 
+           <input type="radio" id="English" name="preferred_language" value="English">
+            <label for="english">English</label><br>
+        
+            <!-- value="Spanish" -->
+            <input type="radio" id="Spanish" name="fav_language" value="Spanish">
+            <label for="spanish">Spanish</label><br>
+            
+        <!-- value="French" -->
+            <input type="radio" id="French"      name="fav_language" value="French">
+            <label for="french">French</label>
+            <br> <br>
+            <!-- Answer submission -->
+            <button type="submitanswer">Submit  Answer</button>
+        </form>    
+        <br><br><br><br>
+    </body>
+</html>
+
