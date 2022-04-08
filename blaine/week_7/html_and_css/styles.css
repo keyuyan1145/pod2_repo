@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .center {
   text-align: center;
 }
@@ -84,3 +85,64 @@ form {
   margin-left: auto;
   margin-right: auto;
 }
+=======
+.center {
+  text-align: center;
+}
+.font_verdana {
+  font-family: Verdana;
+}
+.green {
+  color: rgb(7, 65, 7);
+}
+#fact1 {
+  color: rgb(145, 100, 107);
+}
+#fact2 {
+  color: rgb(19, 0, 128);
+}
+#fact3 {
+  color: rgb(77, 0, 128);
+  font-style: italic;
+}
+form {
+  font-weight: bold;
+}
+fieldset {
+  margin: 10px 0px;
+}
+
+button {
+  background-color: #4caf50;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+}
+.section {
+  background-color: aliceblue;
+  margin: 20px 10px;
+  padding: 20px;
+}
+>>>>>>> 6c582a2d3f21158109f069a4d27edcd9eb4550d5
