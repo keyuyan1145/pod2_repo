@@ -71,9 +71,26 @@ You will notice that we're repeating `Rock` a number of times. This may not seem
 
 a) Briefly describe a better way of modeling genre data in the database to avoid some of the issues listed above. You can assume for the sake of simplicity there can be only one genre per song.
 **Tip**: _Before answering, use pen and paper to sketch out the possibilities. Does your solution involve new table(s), column(s), row(s), relationship(s)?_
+### Genre
+
+| ID  | GenreId     |
+| --- | ----------- |
+| 1   | Rock        |
+| 2   | Hip- Hop    |
 
 b) What relationship best describes how genre relates to songs in your answer to Question 1a?
-
+One to Many Relationship
 # Question 2
 
 What changes would you make to the modeling of genre data if we could assign more than one genre to a song?
+### Song Genre
+
+| ID  | Song               | ArtistId | AlbumId | GenreId |
+| --- | ------------------ | -------- | ------- | ------- |
+| 1   | Here Comes the Sun | 1        | 1       | 1       |
+| 2   | Come Together      | 1        | 1       | 1       |
+| 3   | Let It Be          | 1        | 2       | 1       |
+| 4   | Yesterday          | 1        | 3       | 1       |
+| 5   | Hey Jude           | 1        | 4       | 1       |
+| 6   | Hey JTC            | 2        | 5       | 2       |
+| 7   | Hey JTC            | 2        | 5       | 1       |
