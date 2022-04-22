@@ -64,16 +64,37 @@ In the `Songs` table we've added another column called `Genre`.
 
 You will notice that we're repeating `Rock` a number of times. This may not seem like a problem but consider the following:
 
--   If we had to rename `Rock` and our `Songs` table contained a **million** `Rock` songs, the time to complete such a change would be very long!
--   If we also wanted to assign a genre to an album in the `Albums` table in a similar way, we would have repeated data in multiple tables
+- If we had to rename `Rock` and our `Songs` table contained a **million** `Rock` songs, the time to complete such a change would be very long!
+- If we also wanted to assign a genre to an album in the `Albums` table in a similar way, we would have repeated data in multiple tables
 
 # Question 1
 
 a) Briefly describe a better way of modeling genre data in the database to avoid some of the issues listed above. You can assume for the sake of simplicity there can be only one genre per song.
 **Tip**: _Before answering, use pen and paper to sketch out the possibilities. Does your solution involve new table(s), column(s), row(s), relationship(s)?_
+You can create a 'Genre' table
+
+| ID  | Genre   |
+| --- | ------- |
+| 1   | Rock    |
+| 2   | Country |
+| 3   | Pop     |
+| 4   | Hip Hop |
 
 b) What relationship best describes how genre relates to songs in your answer to Question 1a?
+
+One to Many
 
 # Question 2
 
 What changes would you make to the modeling of genre data if we could assign more than one genre to a song?
+
+Create a junction table that uses foreign keys for the song and genre
+
+| ID  | Song | Genre |
+| --- | ---- | ----- |
+| 1   | 1    | 1     |
+| 2   | 2    | 1     |
+| 3   | 3    | 1     |
+| 4   | 4    | 1     |
+| 5   | 5    | 1     |
+| 6   | 1    | 2     |
