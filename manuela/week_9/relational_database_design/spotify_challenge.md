@@ -82,6 +82,7 @@ a) Briefly describe a better way of modeling genre data in the database to avoid
 | 4   | Yesterday          | 1        | 3       | 1    |
 | 5   | Hey Jude           | 1        | 4       | 1    |
 | 6   | Hey JTC            | 2        | 5       | 2    |
+| 6   | Hey JTC            | 2        | 5       | 1    |
 
 ### Genres
 
@@ -107,7 +108,7 @@ What changes would you make to the modeling of genre data if we could assign mor
 | 6   | Hey JTC            | 2        | 5       | 1    |
 | 6   | Hey JTC            | 2        | 5       | 2    |
 
-#another way:
+#another way:  create a many-to-many model
 ### SongGenres
 
 | ID  |  SongId  | GenreID |
