@@ -85,12 +85,12 @@ One to Many Relationship
 What changes would you make to the modeling of genre data if we could assign more than one genre to a song?
 ### Song Genre
 
-| ID  | Song               | ArtistId | AlbumId | GenreId |
-| --- | ------------------ | -------- | ------- | ------- |
-| 1   | Here Comes the Sun | 1        | 1       | 1       |
-| 2   | Come Together      | 1        | 1       | 1       |
-| 3   | Let It Be          | 1        | 2       | 1       |
-| 4   | Yesterday          | 1        | 3       | 1       |
-| 5   | Hey Jude           | 1        | 4       | 1       |
-| 6   | Hey JTC            | 2        | 5       | 2       |
-| 7   | Hey JTC            | 2        | 5       | 1       |
+| ID  || GenreId |
+| --- || ------- |
+| 1   || 1       |
+| 2   || 1       |
+| 3   || 1       |
+| 4   || 1       |
+| 5   || 1       |
+| 6   || 2       |
+| 7   || 1       |
